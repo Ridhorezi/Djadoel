@@ -1,0 +1,95 @@
+<!-- Sidebar Start -->
+<aside th:fragment="sidebar" class="left-sidebar"
+	xmlns:th="http://www.w3.org/1999/xhtml">
+	<!-- Sidebar scroll-->
+	<div>
+		<div
+			class="brand-logo d-flex align-items-center justify-content-between">
+			<a th:href="@{/}" class="text-nowrap logo-img"> <img
+				th:src="@{/images/Logo-Djadoel.png}" width="180" alt="Logo" />
+			</a>
+			<div
+				class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
+				id="sidebarCollapse">
+				<i class="ti ti-x fs-8"></i>
+			</div>
+		</div>
+		<!-- Sidebar navigation-->
+		<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+			<ul id="sidebarnav">
+				<li class="sidebar-item"><a class="sidebar-link" th:href="@{/}"
+					aria-expanded="false"> <span> <i
+							class="ti ti-layout-dashboard"></i>
+					</span> <span class="hide-menu">Dashboard</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/users}" aria-expanded="false"> <span> <i
+							class="ti ti-users"></i>
+					</span> <span class="hide-menu">Users</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/categories}" aria-expanded="false"> <span> <i
+							class="ti ti-category"></i>
+					</span> <span class="hide-menu">Categories</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/brands}" aria-expanded="false"> <span> <i
+							class="ti ti-brand-appgallery"></i>
+					</span> <span class="hide-menu">Brands</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/products}" aria-expanded="false"> <span> <i
+							class="ti ti-brand-producthunt"></i>
+					</span> <span class="hide-menu">Products</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/customers}" aria-expanded="false"> <span> <i
+							class="ti ti-users"></i>
+					</span> <span class="hide-menu">Customers</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/shipping}" aria-expanded="false"> <span> <i
+							class="ti ti-package"></i>
+					</span> <span class="hide-menu">Shipping</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/orders}" aria-expanded="false"> <span> <i
+							class="ti ti-credit-card"></i>
+					</span> <span class="hide-menu">Orders</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/report}" aria-expanded="false"> <span> <i
+							class="ti ti-report"></i>
+					</span> <span class="hide-menu">Sales Report</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/articles}" aria-expanded="false"> <span> <i
+							class="ti ti-article"></i>
+					</span> <span class="hide-menu">Articles</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/menus}" aria-expanded="false"> <span> <i
+							class="ti ti-menu"></i>
+					</span> <span class="hide-menu">Menus</span>
+				</a></li>
+				<li class="sidebar-item"><a class="sidebar-link"
+					th:href="@{/settings}" aria-expanded="false"> <span> <i
+							class="ti ti-adjustments-horizontal"></i>
+					</span> <span class="hide-menu">Settings</span>
+				</a></li>
+			</ul>
+			<div
+				class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+				<div class="d-flex">
+					<div class="unlimited-access-title me-3">
+						<h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Djadoel -
+							2023</h6>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- End Sidebar navigation -->
+	</div>
+	<!-- End Sidebar scroll-->
+</aside>
+<!--  Sidebar End -->

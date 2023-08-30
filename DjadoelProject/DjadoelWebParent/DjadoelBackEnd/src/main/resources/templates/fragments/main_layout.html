@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Djadoel | Admin Panel</title>
+<link rel="stylesheet" th:href="@{/css/styles.min.css}" />
+</head>
+
+<body>
+	<!--  Body Wrapper -->
+	<div class="page-wrapper" id="main-wrapper" data-layout="vertical"
+		data-navbarbg="skin6" data-sidebartype="full"
+		data-sidebar-position="fixed" data-header-position="fixed">
+
+		<!-- Sidebar  -->
+		<!--sidebar.html  that's here  -->
+		<div th:replace="~{fragments/sidebar :: sidebar}"></div>
+
+		<!--  Main wrapper -->
+		<div class="body-wrapper">
+
+			<!-- Header  -->
+			<!--header.html  that's here  -->
+			<div th:replace="~{fragments/header :: header}"></div>
+
+			<div class="container-fluid">
+				<!--  Content -->
+				<div layout:fragment="content" class="row">
+				</div>
+
+				<!-- Footer -->
+				<!--footer.html  that's here  -->
+				<div th:replace="~{fragments/footer :: footer}"></div>
+
+			</div>
+		</div>
+	</div>
+	<script th:src="@{/libs/jquery/dist/jquery.min.js}"></script>
+	<script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/js/sidebarmenu.js}"></script>
+	<script th:src="@{/js/app.min.js}"></script>
+	<script th:src="@{/libs/apexcharts/dist/apexcharts.min.js}"></script>
+	<script th:src="@{/libs/simplebar/dist/simplebar.js}"></script>
+	<script th:src="@{/js/dashboard.js}"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>DjadoelProject</name>
-	<description>Root project</description>
+	<description>root project</description>
 	
 	<modules>
 		<module>DjadoelCommon</module>

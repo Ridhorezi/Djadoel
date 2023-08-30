@@ -7,5 +7,26 @@
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="D:\project-java-spring\DjadoelEcommerce\.git">
+			<item value="false"/>
+			<item value="Ridho Suhaebi Arrowi &lt;ridhorezi1212@gmail.com&gt;"/>
+			<item value="Setup admin panel, implement role entity, role repositoryand unit testing with junit"/>
+			<item value="Ridho Suhaebi Arrowi &lt;ridhorezi1212@gmail.com&gt;"/>
+			<item value="f8452835fd2496d16d8f91a039eddd46a1696d99"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="395"/>
+		<item key="DIALOG_Y_ORIGIN" value="131"/>
+		<item key="DIALOG_WIDTH" value="663"/>
+		<item key="DIALOG_HEIGHT" value="452"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
 	</section>
 </section>
