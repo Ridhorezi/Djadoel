@@ -5,3 +5,5 @@
 mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
 a
 1src/main/java/com/djadoel/common/entity/Role.java,9\a\9a471e54fc6397c6a429c3a16193905c424bc2ad
+a
+1src/main/java/com/djadoel/common/entity/User.java,8\2\828ceb52c3a6d33a413732cbe1867813947bb556

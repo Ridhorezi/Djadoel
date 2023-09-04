@@ -23,3 +23,7 @@ h
 8src/main/java/com/djadoel/admin/user/RoleRepository.java,2\b\2b9548d851efa7592cd0ee7e5b212dab92962d7e
 m
 =src/test/java/com/djadoel/admin/user/RoleRepositoryTests.java,c\6\c6a14ebd154db21434198a1b73adbedcd1906350
+h
+8src/main/java/com/djadoel/admin/user/UserRepository.java,4\c\4c634abe84ffa06130bb40b76a505351bb445320
+m
+=src/test/java/com/djadoel/admin/user/UserRepositoryTests.java,f\a\fafcfbb29e1a3eabb6b1f179f087d228fba681df
