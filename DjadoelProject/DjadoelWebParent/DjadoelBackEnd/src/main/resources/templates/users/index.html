@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Djadoel | Users</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-5">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Users</li>
+				</ol>
+				<div id="file_export_wrapper" class="dataTables_wrapper">
+					<div class="dt-buttons mb-3">
+						<a th:href="@{/users/create}"
+							class="dt-button buttons-excel buttons-html5 btn btn-primary mr-1"
+							tabindex="0" aria-controls="file_export" fdprocessedid="7ck5v">
+							<i class="ti ti-plus"></i> <span>ADD</span>
+						</a>
+						<button
+							class="dt-button buttons-pdf buttons-html5 btn btn-primary mr-1"
+							tabindex="0" aria-controls="file_export" fdprocessedid="pzz05c">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-file-type-csv" width="24"
+								height="20" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" fill="none" stroke-linecap="round"
+								stroke-linejoin="round">
+							   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							   <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+							   <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+							   <path d="M7 16.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0"></path>
+							   <path
+									d="M10 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75"></path>
+							   <path d="M16 15l2 6l2 -6"></path></svg>
+							<span>CSV</span>
+						</button>
+						<button class="dt-button buttons-print btn btn-primary mr-1"
+							tabindex="0" aria-controls="file_export" fdprocessedid="0buyke">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-file-spreadsheet" width="24"
+								height="20" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" fill="none" stroke-linecap="round"
+								stroke-linejoin="round">
+							   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							   <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+							   <path
+									d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+							   <path d="M8 11h8v7h-8z"></path>
+							   <path d="M8 15h8"></path>
+							   <path d="M11 11v7"></path>
+							</svg>
+							<span>EXCEL</span>
+						</button>
+						<button class="dt-button buttons-print btn btn-primary mr-1"
+							tabindex="0" aria-controls="file_export" fdprocessedid="0buyke">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								class="icon icon-tabler icon-tabler-file-type-pdf" width="24"
+								height="20" viewBox="0 0 24 24" stroke-width="2"
+								stroke="currentColor" fill="none" stroke-linecap="round"
+								stroke-linejoin="round">
+							   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							   <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+							   <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+							   <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+							   <path d="M17 18h2"></path>
+							   <path d="M20 15h-3v6"></path>
+							   <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z"></path>
+							</svg>
+							<span>PDF</span>
+						</button>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<table id="datatable"
+						class="table dt-responsive table-hover nowrap w-100">
+						<thead>
+							<tr>
+								<th>User ID</th>
+								<th>Photos</th>
+								<th>Email</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Roles</th>
+								<th>Enabled</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="user : ${listUsers}">
+								<td>[[${user.id}]]</td>
+								<td></td>
+								<td>[[${user.email}]]</td>
+								<td>[[${user.firstName}]]</td>
+								<td>[[${user.lastName}]]</td>
+								<td>[[${user.roles}]]</td>
+								<td>[[${user.enabled}]]</td>
+								<td>
+									<button class="btn btn-primary btn-sm" title='Edit'>
+										<i class="ti ti-edit"></i> Edit
+									</button>
+
+									<button class="btn btn-danger btn-sm" title='Hapus'>
+										<i class="ti ti-trash"></i> Delete
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	// datatable
+	$(document).ready(function() {
+		new DataTable('#datatable', {
+			responsive : true,
+			rowReorder : {
+				selector : 'td:nth-child(2)'
+			}
+		});
+
+		// sweet alert 
+		if ("[[${swalMessage}]]" === "success") {
+			Swal.fire({
+				icon : "success",
+				title : "Success",
+				text : "The user has been successfully saved",
+				confirmButtonText : 'OK'
+			});
+		} else if ("[[${swalMessage}]]" === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error",
+				text : "Ups! something when wrong",
+				confirmButtonText : 'OK'
+			});
+		}
+	});
+</script>

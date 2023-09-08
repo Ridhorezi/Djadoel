@@ -5,8 +5,6 @@ Y
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 c
 3src/main/java/com/djadoel/admin/MainController.java,6\6\661f7ed418227eb14dec4be665ff28bb7054981d
-W
-'src/main/resources/templates/index.html,c\4\c4d2f13df3643ad7f9a42f7eb5462518cbeba268
 n
 >src/main/java/com/djadoel/admin/DjadoelBackEndApplication.java,d\5\d52f1c1d6b1831555a07c435a4e72d0fe9df4dca
 [
@@ -27,3 +25,13 @@ h
 8src/main/java/com/djadoel/admin/user/UserRepository.java,4\c\4c634abe84ffa06130bb40b76a505351bb445320
 m
 =src/test/java/com/djadoel/admin/user/UserRepositoryTests.java,f\a\fafcfbb29e1a3eabb6b1f179f087d228fba681df
+e
+5src/main/java/com/djadoel/admin/user/UserService.java,3\2\32de88491c8fe117d4ef751dfbc2820806bb955e
+h
+8src/main/java/com/djadoel/admin/user/UserController.java,a\3\a3a20a8420ebdabd3cb79235d7d87d11c52644fc
+[
++src/main/resources/templates/dashboard.html,6\2\62dfc1f7325e099414a6b92e942c499623b4a07e
+]
+-src/main/resources/templates/users/index.html,5\d\5de2dbad69646d093dcae20dfda8dcbff2565ae1
+^
+.src/main/resources/templates/users/create.html,7\b\7bf59e5ed34d274ba66583bf7076d79bf2c77f87

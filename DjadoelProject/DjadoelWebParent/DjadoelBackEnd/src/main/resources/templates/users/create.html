@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Djadoel | Users | Create</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-5">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a
+						th:href="@{/users}">Users</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Create</li>
+				</ol>
+				<form th:action="@{/users/save}" th:object="${user}"
+					class="form-horizontal" method="post">
+					<div class="mb-3">
+						<label>Email :</label> <input type="email" class="form-control"
+							th:field="*{email}" required="required" minlength="5"
+							maxlength="128" />
+					</div>
+					<div class="mb-3">
+						<label>First Name :</label> <input type="text"
+							class="form-control" th:field="*{firstName}" required="required"
+							minlength="1" maxlength="45" />
+					</div>
+					<div class="mb-3">
+						<label>Last Name :</label> <input type="text" class="form-control"
+							th:field="*{lastName}" required="required" minlength="1"
+							maxlength="45" />
+					</div>
+					<div class="mb-3">
+						<label>Password :</label> <input type="password"
+							class="form-control" th:field="*{password}" required="required"
+							minlength="5" maxlength="50" />
+					</div>
+					<div class="mb-2 row pt-2">
+						<label class="mb-1">Roles :</label>
+						<div class="col-sm-8">
+							<th:block th:each="role : ${listRoles}">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input"
+										th:text="${role.name}" th:value="${role.id}"
+										th:field="*{roles}" /> <label class="form-check-label">-
+										[[${role.description}]]</label>
+								</div>
+							</th:block>
+						</div>
+					</div>
+					<div class="mb-2 row">
+						<label class="mb-1">Enabled :</label>
+						<div class="col-sm-4">
+							<div class="form-check form-switch mb-3">
+								<input class="form-check-input" type="checkbox"
+									th:field="*{enabled}" />
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label>Photos</label> <input type="file" class="form-control">
+					</div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
+						<div class="d-flex align-items-start gap-3">
+							<input type="submit" value="Save" class="btn btn-primary"></input>
+							<input type="button" value="Cancel"
+								class="btn btn-light-danger text-danger" id="buttonCancel"></input>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#buttonCancel').on("click", function() {
+			window.location = "[[@{/users}]]";
+		});
+	});
+</script>

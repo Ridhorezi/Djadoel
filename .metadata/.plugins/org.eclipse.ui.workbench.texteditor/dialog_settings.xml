@@ -8,10 +8,11 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Back"/>
+		<item key="selection" value="Hash"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="hash"/>
 			<item value="back"/>
 			<item value="Role"/>
 			<item value="entity."/>
@@ -19,7 +20,6 @@
 			<item value="../assets"/>
 			<item value="section"/>
 			<item value="orders"/>
-			<item value="search"/>
 		</list>
 		<list key="replacehistory">
 		</list>

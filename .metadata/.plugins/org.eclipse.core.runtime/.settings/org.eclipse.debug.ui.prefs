@@ -3,6 +3,7 @@ Console.interpret_control_characters=true
 Console.lowWaterMark=100000
 Console.width=400
 Console.wrap=true
+DEBUG.consoleOpenOnErr=false
 eclipse.preferences.version=1
 org.eclipse.debug.ui.Color=208,27,64
 org.eclipse.debug.ui.MemoryHistoryKnownColor=232,232,238
