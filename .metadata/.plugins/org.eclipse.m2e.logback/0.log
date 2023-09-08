@@ -4798,3 +4798,365 @@ java.nio.channels.CancelledKeyException: null
 2023-09-08 11:17:43,922 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-09-08 11:17:43,922 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-09-08 11:17:43,927 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:11:47,799 [Worker-154: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:230)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:474)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:360)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:313)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:149)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:87)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:364)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:274)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:213)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:196)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: Unrecognised tag: 'groupId' (position: START_TAG seen ...</dependency>\n\t\t<groupId>... @34:12) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:85)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:228)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognised tag: 'groupId' (position: START_TAG seen ...</dependency>\n\t\t<groupId>... @34:12) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkUnknownElement(MavenXpp3Reader.java:178)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2243)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:112)
+	... 26 common frames omitted
+2023-09-08 13:11:52,581 [Worker-153: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:230)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:474)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:360)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:313)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:149)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:87)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:364)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:274)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:213)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:196)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: Unrecognised tag: 'groupId' (position: START_TAG seen ...</dependency>\n\t\t<groupId>... @34:12) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:85)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:228)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognised tag: 'groupId' (position: START_TAG seen ...</dependency>\n\t\t<groupId>... @34:12) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkUnknownElement(MavenXpp3Reader.java:178)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2243)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:112)
+	... 26 common frames omitted
+2023-09-08 13:11:58,270 [Worker-156: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:11:58,272 [Worker-156: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:12:03,146 [Worker-156: reload maven project] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:12:03,156 [Worker-156: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:12:03,323 [Worker-152: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 13:12:04,079 [Worker-152: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:12:04,081 [Worker-152: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:12:04,915 [Worker-152: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 13:12:04,958 [Worker-152: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:12:04,961 [Worker-152: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:12:05,132 [Worker-152: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 13:12:05,157 [Worker-152: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:12:05,158 [Worker-152: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:12:13,691 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:12:13,799 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 13:12:16,422 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:12:19,201 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:12:19,232 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:12:19,237 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 13:13:15,017 [Worker-154: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 13:13:15,693 [Worker-154: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:13:15,698 [Worker-154: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:13:15,853 [Worker-154: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 13:13:15,870 [Worker-154: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:13:15,873 [Worker-154: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:13:15,965 [Worker-154: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 13:13:15,978 [Worker-154: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 13:13:15,980 [Worker-154: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 13:13:17,615 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.3/spring-boot-starter-security-3.1.3-sources.jar
+2023-09-08 13:13:17,937 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.3/spring-boot-starter-security-3.1.3-sources.jar
+2023-09-08 13:13:18,730 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.3
+2023-09-08 13:13:19,312 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.1.3/spring-security-config-6.1.3-sources.jar
+2023-09-08 13:13:19,908 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.1.3/spring-security-config-6.1.3-sources.jar
+2023-09-08 13:13:19,919 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-config:6.1.3
+2023-09-08 13:13:20,063 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.1.3/spring-security-core-6.1.3-sources.jar
+2023-09-08 13:13:20,335 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.1.3/spring-security-core-6.1.3-sources.jar
+2023-09-08 13:13:20,350 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-core:6.1.3
+2023-09-08 13:13:20,598 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.1.3/spring-security-crypto-6.1.3-sources.jar
+2023-09-08 13:13:20,839 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.1.3/spring-security-crypto-6.1.3-sources.jar
+2023-09-08 13:13:20,844 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-crypto:6.1.3
+2023-09-08 13:13:21,241 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.1.3/spring-security-web-6.1.3-sources.jar
+2023-09-08 13:13:21,493 [Worker-146: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.1.3/spring-security-web-6.1.3-sources.jar
+2023-09-08 13:13:21,497 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-web:6.1.3
+2023-09-08 13:13:21,503 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.3
+2023-09-08 13:13:21,509 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-config:6.1.3
+2023-09-08 13:13:21,513 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-core:6.1.3
+2023-09-08 13:13:21,517 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-crypto:6.1.3
+2023-09-08 13:13:21,597 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-web:6.1.3
+2023-09-08 13:13:21,604 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.3
+2023-09-08 13:13:21,609 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-config:6.1.3
+2023-09-08 13:13:21,616 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-core:6.1.3
+2023-09-08 13:13:21,621 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-crypto:6.1.3
+2023-09-08 13:13:21,632 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:13:21,646 [Worker-146: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-web:6.1.3
+2023-09-08 13:13:21,714 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 13:13:27,138 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:13:32,577 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:13:32,578 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:13:32,582 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:13:32,919 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:13:32,983 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 13:13:32,996 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 13:22:46,085 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:22:46,105 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:22:46,112 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:26:03,112 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:26:03,128 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:26:03,140 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:37:50,644 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:37:50,649 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:37:50,657 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:38:01,609 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:01,609 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:01,611 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:38:17,389 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:17,390 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:17,393 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:38:20,484 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:20,484 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:20,522 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:38:24,333 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:24,334 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:38:24,335 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:38:42,159 [Worker-176: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 13:38:42,605 [Worker-176: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 13:51:05,056 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:51:05,069 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:51:05,076 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:55:13,717 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:55:13,720 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:55:13,722 [Worker-183: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:55:24,157 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:55:24,158 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 13:55:24,160 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 13:56:42,174 [Worker-184: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 13:56:42,431 [Worker-184: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 14:09:01,875 [Worker-184: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 14:09:02,065 [Worker-184: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 14:09:02,405 [Worker-184: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 14:11:18,714 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:11:19,073 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:11:19,522 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:14:42,824 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:14:42,992 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:14:43,676 [Worker-198: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:21:38,478 [Worker-200: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:21:38,683 [Worker-200: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:21:38,949 [Worker-200: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:28:21,847 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:28:22,024 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:28:22,287 [Worker-204: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:31:58,152 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:31:58,234 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:31:58,507 [Worker-214: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:34:41,822 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:34:42,135 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:34:42,406 [Worker-216: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:36:02,401 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:36:02,608 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:36:02,889 [Worker-213: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:53:02,953 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:53:03,267 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:53:03,914 [Worker-222: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:54:39,966 [Worker-225: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:54:40,090 [Worker-225: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:54:40,270 [Worker-225: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:57:55,100 [Worker-227: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 14:57:56,025 [Worker-227: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:57:56,053 [Worker-227: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:57:56,379 [Worker-227: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 14:57:56,405 [Worker-227: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:57:56,412 [Worker-227: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:57:56,860 [Worker-227: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 14:57:56,875 [Worker-227: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:57:56,878 [Worker-227: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:58:03,326 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:03,589 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:58:09,814 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:58:13,216 [Worker-228: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:13,260 [Worker-228: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:13,285 [Worker-228: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 14:58:15,109 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 14:58:15,563 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:58:15,573 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:58:15,756 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 14:58:15,775 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:58:15,777 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:58:15,952 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 14:58:15,965 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:58:16,337 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:58:18,271 [Worker-223: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.0/spring-boot-starter-security-3.1.0-sources.jar
+2023-09-08 14:58:18,536 [Worker-223: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.0/spring-boot-starter-security-3.1.0-sources.jar
+2023-09-08 14:58:18,908 [Worker-223: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.0
+2023-09-08 14:58:19,156 [Worker-223: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.0
+2023-09-08 14:58:19,245 [Worker-223: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.0
+2023-09-08 14:58:23,590 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:23,861 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 14:58:27,900 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 14:58:29,041 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:29,076 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:58:29,125 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 14:59:52,298 [Worker-223: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 14:59:52,701 [Worker-223: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:59:52,705 [Worker-223: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:59:52,815 [Worker-223: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 14:59:52,826 [Worker-223: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:59:52,828 [Worker-223: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:59:52,901 [Worker-223: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 14:59:52,911 [Worker-223: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 14:59:52,913 [Worker-223: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 14:59:57,379 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 14:59:57,521 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:00:00,719 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:00:07,090 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:00:07,155 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:00:07,174 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 15:01:26,308 [Worker-221: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 15:01:27,145 [Worker-221: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:01:27,159 [Worker-221: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:01:27,335 [Worker-221: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 15:01:27,364 [Worker-221: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:01:27,367 [Worker-221: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:01:27,511 [Worker-221: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 15:01:27,540 [Worker-221: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:01:27,542 [Worker-221: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:01:31,331 [Worker-231: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.1/spring-boot-starter-security-3.1.1-sources.jar
+2023-09-08 15:01:31,446 [Worker-231: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.1.1/spring-boot-starter-security-3.1.1-sources.jar
+2023-09-08 15:01:31,452 [Worker-231: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.1
+2023-09-08 15:01:31,475 [Worker-231: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.1
+2023-09-08 15:01:31,497 [Worker-231: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.1.1
+2023-09-08 15:01:40,714 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:01:40,879 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:01:45,438 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:01:49,342 [Worker-224: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:01:49,379 [Worker-224: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:01:49,391 [Worker-224: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 15:02:08,821 [Worker-224: Launching Executing install in D__project-java-spring_DjadoelEcommerce_DjadoelProject] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\project-java-spring\DjadoelEcommerce\DjadoelProject":
+2023-09-08 15:02:08,823 [Worker-224: Launching Executing install in D__project-java-spring_DjadoelEcommerce_DjadoelProject] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install -Dstyle.color=always
+2023-09-08 15:02:39,815 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:02:39,990 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:02:40,126 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:04:44,034 [Worker-234: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 15:04:45,081 [Worker-234: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:04:45,153 [Worker-234: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:04:45,595 [Worker-234: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 15:04:45,651 [Worker-234: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:04:45,657 [Worker-234: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:04:45,831 [Worker-234: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 15:04:45,911 [Worker-234: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:04:45,917 [Worker-234: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:04:53,626 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:04:53,849 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:04:59,340 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:05:01,605 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:05:01,967 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:05:02,202 [Worker-234: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 15:05:34,733 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.djadoel:DjadoelWebParent:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\pom.xml.
+2023-09-08 15:05:36,660 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:05:36,785 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:05:37,232 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelFrontEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\pom.xml.
+2023-09-08 15:05:37,252 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:05:37,255 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:05:37,495 [Worker-228: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.djadoel:DjadoelBackEnd:0.0.1-SNAPSHOT @ D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\pom.xml.
+2023-09-08 15:05:37,518 [Worker-228: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-09-08 15:05:37,523 [Worker-228: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-09-08 15:05:42,859 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:05:42,859 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:05:42,864 [Worker-221: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:05:43,058 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:05:43,058 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:05:43,061 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelFrontEnd\src\test\resources
+2023-09-08 15:06:16,524 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:06:16,525 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:06:16,529 [Worker-231: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelCommon\src\test\resources
+2023-09-08 15:06:26,459 [Worker-188: Launching Executing install in D__project-java-spring_DjadoelEcommerce_DjadoelProject] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "D:\project-java-spring\DjadoelEcommerce\DjadoelProject":
+2023-09-08 15:06:26,463 [Worker-188: Launching Executing install in D__project-java-spring_DjadoelEcommerce_DjadoelProject] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install -Dstyle.color=always
+2023-09-08 15:06:58,113 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:06:58,118 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-09-08 15:06:58,123 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:17:26,808 [Worker-240: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:17:28,092 [Worker-240: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:17:28,716 [Worker-240: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:20:31,121 [Worker-242: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:20:31,355 [Worker-242: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:20:31,769 [Worker-242: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:20:36,637 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:20:37,038 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:20:37,188 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:24:55,059 [Worker-227: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:24:55,251 [Worker-227: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:24:55,508 [Worker-227: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:25:12,417 [Worker-251: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 15:25:12,594 [Worker-251: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 15:25:12,736 [Worker-251: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 15:26:01,748 [Worker-250: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:26:01,859 [Worker-250: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:26:02,155 [Worker-250: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:26:36,001 [Worker-252: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:26:36,179 [Worker-252: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:26:37,648 [Worker-252: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:34:03,692 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:34:03,798 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:34:04,050 [Worker-257: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:38:35,702 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:38:35,951 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:38:36,322 [Worker-245: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 15:39:10,853 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-09-08 15:39:10,907 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 648 resources from src\main\resources to target\classes
+2023-09-08 15:39:11,070 [Worker-256: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-09-08 16:02:14,946 [Worker-264: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:02:15,200 [Worker-264: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:02:42,306 [Worker-256: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:02:42,519 [Worker-256: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:04:28,180 [Worker-256: Launching UserRepositoryTests.testCreateUserWithOneRole] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:04:28,436 [Worker-256: Launching UserRepositoryTests.testCreateUserWithOneRole] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:06:15,523 [Worker-270: Launching PasswordEncoderTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:06:15,709 [Worker-270: Launching PasswordEncoderTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:12:21,091 [Worker-272: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:12:21,295 [Worker-272: Launching PasswordEncoderTest.testEncodePassword] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:14:52,082 [Worker-256: Launching UserRepositoryTests.testUpdateUserDetails] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:14:52,313 [Worker-256: Launching UserRepositoryTests.testUpdateUserDetails] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-09-08 16:26:02,021 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-09-08 16:26:04,056 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sonarLintSpringAppConfig' of type [org.sonarsource.sonarlint.core.spring.SonarLintSpringAppConfig$$EnhancerBySpringCGLIB$$f9a15309] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-08 16:26:04,136 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'provideClientEventBus' of type [com.google.common.eventbus.AsyncEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)

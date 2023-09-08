@@ -35,3 +35,7 @@ h
 -src/main/resources/templates/users/index.html,5\d\5de2dbad69646d093dcae20dfda8dcbff2565ae1
 ^
 .src/main/resources/templates/users/create.html,7\b\7bf59e5ed34d274ba66583bf7076d79bf2c77f87
+o
+?src/main/java/com/djadoel/admin/security/WebSecurityConfig.java,6\4\6462714cc7bfd2146ee29d16db81566e5b315292
+m
+=src/test/java/com/djadoel/admin/user/PasswordEncoderTest.java,e\6\e64f058047f1c7cb26493778cdeeb75090ef1075
