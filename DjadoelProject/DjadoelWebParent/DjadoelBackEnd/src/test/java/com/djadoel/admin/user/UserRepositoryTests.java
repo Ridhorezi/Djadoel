@@ -79,9 +79,9 @@ public class UserRepositoryTests {
 	@Test
 	public void testUpdateUserDetails() {
 
-		User userAdmin = repo.findById(1).get();
+		User userAdmin = repo.findById(2).get();
 
-		userAdmin.setEnabled(true);
+		userAdmin.setEnabled(false);
 
 		repo.save(userAdmin);
 	}
@@ -105,8 +105,15 @@ public class UserRepositoryTests {
 	@Test
 	public void testDeleteUser() {
 
-		Integer userId = 2;
+		Integer userId = 6;
 
 		repo.deleteById(userId);
+	}
+
+	@Test
+	public void testGetUserByEmail() {
+		String email = "19211090@bsi.ac.id";
+		User user = repo.getUserByEmail(email);
+		assertThat(user).isNotNull();
 	}
 }

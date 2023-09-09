@@ -9,14 +9,15 @@
 	<div layout:fragment="content" class="row">
 		<div class="card">
 			<div class="card-body">
-				<ol class="breadcrumb mb-5">
+				<ol class="breadcrumb mb-4">
 					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
 					<li class="breadcrumb-item active" aria-current="page"><a
 						th:href="@{/users}">Users</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Create</li>
 				</ol>
 				<form th:action="@{/users/save}" th:object="${user}"
-					class="form-horizontal" method="post">
+					class="form-horizontal" method="post"
+					onsubmit="return checkEmailUnique(this);">
 					<div class="mb-3">
 						<label>Email :</label> <input type="email" class="form-control"
 							th:field="*{email}" required="required" minlength="5"
@@ -84,4 +85,71 @@
 			window.location = "[[@{/users}]]";
 		});
 	});
+
+	function checkEmailUnique(form) {
+		var url = "[[@{/users/check_email}]]";
+		var userEmail = $("#email").val();
+		var csrfValue = $("input[name='_csrf']").val();
+		var params = {
+			email : userEmail,
+			_csrf : csrfValue
+		};
+		var isResponseReceived = false; // Menandai apakah respons telah diterima
+		var requestTimeout = setTimeout(function() {
+			if (!isResponseReceived) {
+				// Jika respons belum diterima, tampilkan pesan timeout
+				Swal.fire({
+					icon : "error",
+					title : "Ups !",
+					text : "Request timed out.",
+					showCloseButton : true,
+				});
+			}
+		}, 7000); // Timeout dalam milidetik (7 detik)
+
+		$.post(
+				url,
+				params,
+				function(response) {
+					isResponseReceived = true; // Tandai bahwa respons telah diterima
+					clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+					if (response == "OK") {
+						form.submit();
+					} else if (response == "Duplicated") {
+						Swal.fire({
+							icon : "info",
+							title : response,
+							text : "There is another user having the email "
+									+ userEmail,
+							customClass : {
+								text : 'text-class'
+							},
+							showCloseButton : true,
+						});
+					} else {
+						Swal.fire({
+							icon : "error",
+							title : response,
+							text : "Unknown response from server",
+							showCloseButton : true,
+						});
+					}
+				}).fail(function(response) {
+			isResponseReceived = true; // Tandai bahwa respons telah diterima
+			clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+			Swal.fire({
+				icon : "error",
+				title : "Ups !",
+				text : "An error occurred while connecting to the server",
+				showCloseButton : true,
+			});
+		});
+		return false;
+	}
 </script>
+
+<style type="text/css">
+.title-class {
+	font-size: 17px !important;
+}
+</style>
