@@ -112,8 +112,37 @@ public class UserRepositoryTests {
 
 	@Test
 	public void testGetUserByEmail() {
+
 		String email = "19211090@bsi.ac.id";
+
 		User user = repo.getUserByEmail(email);
+
 		assertThat(user).isNotNull();
+	}
+
+	@Test
+	public void testCountById() {
+
+		Integer id = 1;
+
+		Long countByid = repo.countById(id);
+
+		assertThat(countByid).isNotNull().isGreaterThan(0);
+	}
+
+	@Test
+	public void testDisabledUser() {
+
+		Integer id = 1;
+
+		repo.updateEnabledStatus(id, false);
+	}
+	
+	@Test
+	public void testEnabledUser() {
+
+		Integer id = 2;
+
+		repo.updateEnabledStatus(id, true);
 	}
 }

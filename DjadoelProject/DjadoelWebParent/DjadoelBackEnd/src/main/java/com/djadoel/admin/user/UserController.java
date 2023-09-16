@@ -1,16 +1,24 @@
 package com.djadoel.admin.user;
 
+import java.io.IOException;
 import java.util.List;
 
+import com.djadoel.admin.FileUploadUtil;
 import com.djadoel.common.entity.Role;
 import com.djadoel.common.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 public class UserController {
@@ -37,16 +45,109 @@ public class UserController {
 		return "users/create";
 	}
 
-	@PostMapping("/users/save")
-	public String save(User user, RedirectAttributes redirectAttributes) {
+	@GetMapping("/users/edit/{id}")
+	public String edit(@PathVariable(name = "id") Integer id, Model model, RedirectAttributes redirectAttributes) {
 		try {
-			service.save(user);
-			// Jika penyimpanan berhasil, "success"
-			redirectAttributes.addFlashAttribute("swalMessage", "success");
-		} catch (Exception e) {
-			// Jika ada kesalahan, "error"
-			redirectAttributes.addFlashAttribute("swalMessage", "error");
+			User user = service.get(id);
+			List<Role> listRoles = service.listRoles();
+			model.addAttribute("user", user);
+			model.addAttribute("listRoles", listRoles);
+
+			return "users/edit";
+		} catch (UserNotFoundException exception) {
+			String message = exception.getMessage();
+			redirectAttributes.addFlashAttribute("infoMessage", message);
+
+			return "redirect:/users";
 		}
+	}
+
+	@PostMapping("/users/save")
+	public String save(User user, RedirectAttributes redirectAttributes,
+			@RequestParam("image") MultipartFile multipartFile) {
+		String messageKey = user.getId() == null ? "addMessage" : "updateMessage";
+		try {
+			String fileName = processImage(user, multipartFile);
+			User savedUser = service.save(user);
+			redirectAttributes.addFlashAttribute(messageKey, "success");
+		} catch (IOException exception) {
+			if (!multipartFile.isEmpty()) {
+				redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
+			}
+		}
+
 		return "redirect:/users";
 	}
+
+	private String processImage(User user, MultipartFile multipartFile) throws IOException {
+		if (multipartFile.isEmpty()) {
+			user.setPhotos(null); // Set image null if file not uploaded!
+			return null;
+		}
+		String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+		user.setPhotos(fileName);
+		User savedUser = service.save(user);
+		String uploadDirectory = "user-photos/" + savedUser.getId();
+		FileUploadUtil.cleanDirectory(uploadDirectory);
+		FileUploadUtil.saveFile(uploadDirectory, fileName, multipartFile);
+
+		return fileName;
+	}
+
+	@GetMapping("/users/{id}/enabled/{status}")
+	public String updateUserEnabledStatus(@PathVariable("id") Integer id, @PathVariable("status") boolean enabled,
+			RedirectAttributes redirectAttributes) {
+		try {
+			service.updateUserEnabledStatus(id, enabled);
+			String status = enabled ? "enabled" : "disabled";
+			String message = "The user ID " + id + " has been " + status;
+			redirectAttributes.addFlashAttribute("statusMessage", message);
+		} catch (Exception exception) {
+			String message = exception.getMessage();
+			redirectAttributes.addFlashAttribute("infoMessage", message);
+		}
+
+		return "redirect:/users";
+	}
+
+	@GetMapping("/users/delete/{id}")
+	public String delete(@PathVariable(name = "id") Integer id, Model model, RedirectAttributes redirectAttributes) {
+		try {
+			// get user
+			User user = service.get(id);
+			// delete user form database
+			service.delete(id);
+			// delete forder and image
+			String uploadDirectory = "user-photos/" + user.getId();
+			FileUploadUtil.deleteDirectory(uploadDirectory);
+			redirectAttributes.addFlashAttribute("deleteMessage", "success");
+		} catch (UserNotFoundException exception) {
+			String message = exception.getMessage();
+			redirectAttributes.addFlashAttribute("infoMessage", message);
+		}
+
+		return "redirect:/users";
+	}
+
+	@GetMapping("/users/export/csv")
+	public void exportToCsv(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserCsvExporter exporter = new UserCsvExporter();
+		exporter.export(listUsers, response);
+	}
+
+	@GetMapping("/users/export/excel")
+	public void exportToExcel(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserExcelExporter exporter = new UserExcelExporter();
+		exporter.export(listUsers, response);
+	}
+	
+	@GetMapping("/users/export/pdf")
+	public void exportToPdf(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserPdfExporter exporter = new UserPdfExporter();
+		exporter.export(listUsers, response);
+	}
+
 }

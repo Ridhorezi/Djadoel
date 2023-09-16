@@ -17,23 +17,21 @@
 					<div class="dt-buttons mb-3">
 						<a th:href="@{/users/create}"
 							class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-secondary mr-1"
-							tabindex="0" aria-controls="fil	e_export"> <i
+							tabindex="0" aria-controls="fil	e_export" title="Add"> <i
 							class="bi bi-plus"></i> <span>ADD</span>
-						</a>
-						<button
+						</a> <a th:href="@{/users/export/csv}" id="csvButton"
 							class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-success mr-1"
-							tabindex="0" aria-controls="file_export">
-							<i class="bi bi-filetype-csv"></i> <span>CSV</span>
-						</button>
-						<button
+							tabindex="0" aria-controls="file_export"> <i
+							class="bi bi-filetype-csv"></i> <span>CSV</span>
+						</a> <a th:href="@{/users/export/excel}" id="excelButton"
 							class="dt-button btn-sm buttons-print btn btn-warning mr-1"
-							tabindex="0" aria-controls="file_export">
-							<i class="bi bi-file-earmark-excel"></i> <span>EXCEL</span>
-						</button>
-						<button class="dt-button btn-sm buttons-print btn btn-danger mr-1"
-							tabindex="0" aria-controls="file_export">
-							<i class="bi bi-file-pdf"></i> <span>PDF</span>
-						</button>
+							tabindex="0" aria-controls="file_export"> <i
+							class="bi bi-file-earmark-excel"></i> <span>EXCEL</span>
+						</a> <a th:href="@{/users/export/pdf}" id="pdfButton"
+							class="dt-button btn-sm buttons-print btn btn-danger mr-1"
+							tabindex="0" aria-controls="file_export"> <i
+							class="bi bi-file-pdf"></i> <span>PDF</span>
+						</a>
 					</div>
 				</div>
 				<div class="table-responsive">
@@ -54,25 +52,31 @@
 						<tbody>
 							<tr th:each="user : ${listUsers}">
 								<td>[[${user.id}]]</td>
-								<td><span th:if="${user.photos == null}"
-									class="bi bi-person-bounding-box" style="font-size: 25px;"></span></td>
+								<td><img th:if="${user.photos != null}"
+									th:src="@{${user.photosImagePath}}"
+									class="img-fluid img-thumbnail" width="60" alt="Photos">
+									<img th:if="${user.photos == null}"
+									th:src="@{/images/default-user.png}"
+									class="img-fluid img-thumbnail" width="60" alt="Photos">
+								</td>
 								<td>[[${user.email}]]</td>
 								<td>[[${user.firstName}]]</td>
 								<td>[[${user.lastName}]]</td>
 								<td>[[${user.roles}]]</td>
 								<td><a th:if="${user.enabled == true}"
-									class="bi bi-toggle-on" style="font-size: 25px;"> </a> <a
-									th:if="${user.enabled == false}" class="bi bi-toggle-off"
-									style="font-size: 25px;"> </a></td>
-								<td>
-									<button class="btn btn-primary btn-sm" title='Edit'>
-										<i class="bi bi-pencil-square"></i> Edit
-									</button>
-
-									<button class="btn btn-danger btn-sm" title='Hapus'>
-										<i class="bi bi-trash"></i> Delete
-									</button>
-								</td>
+									th:href="@{'/users/' + ${user.id} + '/enabled/false'}"
+									class="bi bi-toggle-on" style="font-size: 25px;"
+									title="Disabled"> </a> <a th:if="${user.enabled == false}"
+									th:href="@{'/users/' + ${user.id} + '/enabled/true'}"
+									class="bi bi-toggle-off" style="font-size: 25px;"
+									title="Enabled"> </a></td>
+								<td><a th:href="@{'/users/edit/' + ${user.id}}"
+									class="btn btn-primary btn-sm" title='Edit'> <i
+										class="bi bi-pencil-square"></i> Edit
+								</a> <a th:href="@{'/users/delete/' + ${user.id}}" id="deleteButton"
+									class="btn btn-danger btn-sm" title='Delete'> <i
+										class="bi bi-trash"></i> Delete
+								</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -85,7 +89,6 @@
 </html>
 
 <script type="text/javascript">
-	// datatable
 	$(document).ready(function() {
 		new DataTable('#datatable', {
 			responsive : true,
@@ -93,26 +96,142 @@
 				selector : 'td:nth-child(2)'
 			},
 			columnDefs : [ {
-				targets : 1, // This targets the second column (0-based index)
-				className : 'text-start' // Apply the 'text-center' class to center-align the content
+				targets : [ 1, 6 ],
+				className : 'text-center'
 			} ]
 		});
+		
+		const Toast = Swal.mixin({
+			  toast: true,
+			  position: 'top-end',
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  didOpen: (toast) => {
+			    toast.addEventListener('mouseenter', Swal.stopTimer)
+			    toast.addEventListener('mouseleave', Swal.resumeTimer)
+			  }
+			})
 
-		// popup message success add user
-		if ("[[${swalMessage}]]" === "success") {
-			Swal.fire({
+		var addMessage = "[[${addMessage}]]";
+
+		var updateMessage = "[[${updateMessage}]]";
+		
+		var deleteMessage = "[[${deleteMessage}]]";
+		
+		var statusMessage = "[[${statusMessage}]]";
+		
+		var infoMessage = "[[${infoMessage}]]";
+
+		if (addMessage === "success") {
+			Toast.fire({
 				icon : "success",
-				title : "Success",
 				text : "The user has been successfully saved",
-				showCloseButton : true,
 			});
-		} else if ("[[${swalMessage}]]" === "error") {
+		} else if (addMessage === "error") {
 			Swal.fire({
 				icon : "error",
-				title : "Error",
-				text : "Ups! something when wrong",
+				title : "Error !",
+				text : addMessage,
+				showCloseButton : true,
+			});
+		} else if (updateMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The user has been successfully updated",
+			});
+		}  else if (updateMessage === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error !",
+				text : updateMessage,
+				showCloseButton : true,
+			});
+		} else if (deleteMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The user has been successfully deleted",
+			});
+		}  else if (statusMessage && statusMessage !== "undefined") {
+			Toast.fire({
+				icon : "success",
+				text : statusMessage,
+			});
+		} else if (infoMessage && infoMessage !== "undefined") {
+			Swal.fire({
+				icon : "info",
+				title : "Info !",
+				text : infoMessage,
 				showCloseButton : true,
 			});
 		}
 	});
+	
+	$('.btn.btn-danger.btn-sm').click(function(e) {
+		e.preventDefault();
+		var deleteLink = $(this).attr('href');
+		Swal.fire({
+			title: 'Are you sure?',
+			text: "You won't be able to revert this!",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonText: 'Yes, delete it!'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				window.location.href = deleteLink;
+			}
+		});
+	});
+	
+	$('#csvButton').click(function (e) {
+	    e.preventDefault();
+	    var exportLink = $(this).attr('href');
+	    Swal.fire({
+	        title: 'Export CSV',
+	        text: 'Are you sure you want to export CSV?',
+	        icon: 'question',
+	        showCancelButton: true,
+	        confirmButtonText: 'Yes, export it!',
+	        cancelButtonText: 'Cancel'
+	    }).then((result) => {
+	    	if (result.isConfirmed) {
+				window.location.href = exportLink;
+			}
+	    });
+	});
+	
+	$('#excelButton').click(function (e) {
+	    e.preventDefault();
+	    var exportLink = $(this).attr('href');
+	    Swal.fire({
+	        title: 'Export Excel',
+	        text: 'Are you sure you want to export Excel?',
+	        icon: 'question',
+	        showCancelButton: true,
+	        confirmButtonText: 'Yes, export it!',
+	        cancelButtonText: 'Cancel'
+	    }).then((result) => {
+	    	if (result.isConfirmed) {
+				window.location.href = exportLink;
+			}
+	    });
+	});
+	
+	$('#pdfButton').click(function (e) {
+	    e.preventDefault();
+	    var exportLink = $(this).attr('href');
+	    Swal.fire({
+	        title: 'Export PDF',
+	        text: 'Are you sure you want to export PDF?',
+	        icon: 'question',
+	        showCancelButton: true,
+	        confirmButtonText: 'Yes, export it!',
+	        cancelButtonText: 'Cancel'
+	    }).then((result) => {
+	    	if (result.isConfirmed) {
+				window.location.href = exportLink;
+			}
+	    });
+	});
+
 </script>
