@@ -7,6 +7,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas konfigurasi Spring MVC untuk menangani sumber daya statis.
+// Kode:
+//  - addResourceHandlers(): Metode untuk mengkonfigurasi penanganan sumber daya statis, seperti gambar pengguna.
+
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 

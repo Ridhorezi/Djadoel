@@ -11,6 +11,15 @@ import java.util.Comparator;
 
 import org.springframework.web.multipart.MultipartFile;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas utilitas untuk mengelola upload file.
+// Kode:
+// 	- saveFile(): Metode untuk menyimpan file yang diupload.
+// 	- cleanDirectory(): Metode untuk membersihkan isi direktori.
+// 	- deleteDirectory(): Metode untuk menghapus direktori beserta isinya.
+
 public class FileUploadUtil {
 
 	public static void saveFile(String uploadDirectory, String fileName, MultipartFile multipartFile)

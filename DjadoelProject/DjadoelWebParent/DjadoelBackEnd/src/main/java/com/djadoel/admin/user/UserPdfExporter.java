@@ -17,6 +17,15 @@ import com.lowagie.text.pdf.PdfWriter;
 
 import jakarta.servlet.http.HttpServletResponse;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas utilitas untuk mengekspor daftar pengguna ke dalam format PDF.
+// Kode:
+//  - writeTableHeader(PdfPTable table): Metode untuk menulis header tabel ke dalam dokumen PDF.
+//  - writeTableData(PdfPTable table, List<User> listUsers): Metode untuk menulis data pengguna ke dalam dokumen PDF.
+//  - export(List<User> listUsers, HttpServletResponse response): Metode untuk mengekspor data pengguna ke dalam file PDF.
+
 public class UserPdfExporter extends AbstractExporter {
 
 	public void writeTableHeader(PdfPTable table) {
@@ -84,8 +93,8 @@ public class UserPdfExporter extends AbstractExporter {
 		table.setWidthPercentage(100f);
 
 		table.setSpacingBefore(10);
-		
-		table.setWidths(new float[] {1.0f, 3.5f, 3.0f, 3.0f, 3.0f, 2.0f});
+
+		table.setWidths(new float[] { 1.0f, 3.5f, 3.0f, 3.0f, 3.0f, 2.0f });
 
 		writeTableHeader(table);
 

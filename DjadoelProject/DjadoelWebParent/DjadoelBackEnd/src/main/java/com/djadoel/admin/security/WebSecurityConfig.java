@@ -8,6 +8,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas konfigurasi untuk mengatur keamanan web dengan Spring Security.
+// Kode:
+//  - @EnableWebSecurity: Anotasi yang mengaktifkan konfigurasi keamanan web.
+//  - PasswordEncoder(): Metode yang mengembalikan bean PasswordEncoder untuk mengenkripsi kata sandi.
+//  - securityFilterChain(HttpSecurity http): Metode untuk mengatur konfigurasi akses ke URL.
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {

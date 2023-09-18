@@ -12,6 +12,20 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas Service untuk mengelola entitas User.
+// Kode:
+//  - listAll(): Metode untuk mendapatkan daftar semua pengguna.
+//  - listRoles(): Metode untuk mendapatkan daftar semua peran.
+//  - encodePassword(User user): Metode untuk mengenkripsi kata sandi pengguna.
+//  - isEmailUnique(Integer id, String email): Metode untuk memeriksa apakah alamat email unik.
+//  - save(User user): Metode untuk menyimpan atau memperbarui pengguna.
+//  - get(Integer id): Metode untuk mendapatkan pengguna berdasarkan ID.
+//  - delete(Integer id): Metode untuk menghapus pengguna berdasarkan ID.
+//  - updateUserEnabledStatus(Integer id, boolean enabled): Metode untuk memperbarui status pengguna (Aktif/Tidak Aktif) berdasarkan ID.
+
 @Service
 @Transactional
 public class UserService {

@@ -16,6 +16,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 
+// Created by: Ridho Suhaebi Arrowi
+// IDE: Spring Tool Suite 4
+// Information: ridhosuhaebi01@gmail.com
+// Fungsi: Kelas utilitas untuk mengekspor daftar pengguna ke dalam format Excel (XLSX).
+// Kode:
+//  - UserExcelExporter(): Konstruktor untuk inisialisasi objek XSSFWorkbook.
+//  - writeHeaderLine(): Metode untuk menulis baris header dalam lembar kerja Excel.
+//  - createCell(XSSFRow row, int columnIndex, Object value, CellStyle style): Metode untuk membuat sel dalam baris dengan nilai dan gaya tertentu.
+//  - writeDataLine(List<User> listUsers): Metode untuk menulis data pengguna ke dalam lembar kerja Excel.
+//  - export(List<User> listUsers, HttpServletResponse response): Metode untuk mengekspor data pengguna ke dalam file Excel (XLSX).
+
 public class UserExcelExporter extends AbstractExporter {
 
 	private XSSFWorkbook workbook;
@@ -51,7 +62,7 @@ public class UserExcelExporter extends AbstractExporter {
 
 	private void createCell(XSSFRow row, int columnIndex, Object value, CellStyle style) {
 		XSSFCell cell = row.createCell(columnIndex);
-		
+
 		sheet.autoSizeColumn(columnIndex);
 
 		if (value instanceof Integer) {
