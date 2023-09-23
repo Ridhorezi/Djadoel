@@ -1,6 +1,7 @@
 <!doctype html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.w3.org/1999/xhtml">
+	xmlns:th="http://www.w3.org/1999/xhtml"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 
 <head>
 <meta charset="utf-8">
@@ -53,11 +54,13 @@
 	<script th:src="@{/libs/apexcharts/dist/apexcharts.min.js}"></script>
 	<script th:src="@{/libs/simplebar/dist/simplebar.js}"></script>
 	<script th:src="@{/js/dashboard.js}"></script>
+	<script th:src="@{/js/common_all.js}"></script>
 	<script
 		src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 	<script
 		src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

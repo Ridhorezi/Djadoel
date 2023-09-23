@@ -18,5 +18,10 @@ public class MainController {
 	public String viewHomePage() {
 		return "dashboard";
 	}
+	
+	@GetMapping("/login")
+	public String viewLoginPage() {
+		return "login";
+	}
 
 }
