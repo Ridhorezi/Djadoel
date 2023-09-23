@@ -10,14 +10,40 @@
 		<div class="card">
 			<div class="card-body">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a
-						th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
 					<li class="breadcrumb-item active" aria-current="page"></li>
 				</ol>
 			</div>
 		</div>
 		<!--  Row 1 -->
 		<div class="row">
+			<div class="col-lg-12 d-flex align-items-stretch">
+				<div class="card w-100 bg-light-info overflow-hidden shadow-none">
+					<div class="card-body position-relative">
+						<div class="row">
+							<div class="col-sm-7">
+								<p class="fw-semibold mb-0 fs-5 mb-3">
+									Welcome back to the djadoel admin panel 👋🏼</span>
+								</p>
+								<div class="fs-5">
+									- Name :<br> <span style="margin-left: 2%;"
+										sec:authentication="principal.fullname"></span> <br> -
+									Role :<br> <span style="margin-left: 2%;"
+										sec:authentication="principal.authorities"></span>
+								</div>
+								<p class="fs-5 mb-4"></p>
+							</div>
+							<div class="col-sm-5">
+								<div class="welcome-bg-img mb-n7 text-end">
+									<img th:src="@{/images/welcome.svg}" alt="Welcome Image"
+										class="img-fluid">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="col-lg-8 d-flex align-items-strech">
 				<div class="card w-100">
 					<div class="card-body">
@@ -117,3 +143,4 @@
 </body>
 
 </html>
+

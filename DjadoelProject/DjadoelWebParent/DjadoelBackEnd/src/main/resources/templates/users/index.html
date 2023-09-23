@@ -88,39 +88,19 @@
 
 </html>
 
+<script th:src="@{/js/common_users.js}"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
-		new DataTable('#datatable', {
-			responsive : true,
-			rowReorder : {
-				selector : 'td:nth-child(2)'
-			},
-			columnDefs : [ {
-				targets : [ 1, 6 ],
-				className : 'text-center'
-			} ]
-		});
-		
-		const Toast = Swal.mixin({
-			  toast: true,
-			  position: 'top-end',
-			  showConfirmButton: false,
-			  timer: 3000,
-			  timerProgressBar: true,
-			  didOpen: (toast) => {
-			    toast.addEventListener('mouseenter', Swal.stopTimer)
-			    toast.addEventListener('mouseleave', Swal.resumeTimer)
-			  }
-			})
 
 		var addMessage = "[[${addMessage}]]";
 
 		var updateMessage = "[[${updateMessage}]]";
-		
+
 		var deleteMessage = "[[${deleteMessage}]]";
-		
+
 		var statusMessage = "[[${statusMessage}]]";
-		
+
 		var infoMessage = "[[${infoMessage}]]";
 
 		if (addMessage === "success") {
@@ -140,7 +120,7 @@
 				icon : "success",
 				text : "The user has been successfully updated",
 			});
-		}  else if (updateMessage === "error") {
+		} else if (updateMessage === "error") {
 			Swal.fire({
 				icon : "error",
 				title : "Error !",
@@ -152,7 +132,7 @@
 				icon : "success",
 				text : "The user has been successfully deleted",
 			});
-		}  else if (statusMessage && statusMessage !== "undefined") {
+		} else if (statusMessage && statusMessage !== "undefined") {
 			Toast.fire({
 				icon : "success",
 				text : statusMessage,
@@ -166,72 +146,4 @@
 			});
 		}
 	});
-	
-	$('.btn.btn-danger.btn-sm').click(function(e) {
-		e.preventDefault();
-		var deleteLink = $(this).attr('href');
-		Swal.fire({
-			title: 'Are you sure?',
-			text: "You won't be able to revert this!",
-			icon: 'warning',
-			showCancelButton: true,
-			confirmButtonText: 'Yes, delete it!'
-		}).then((result) => {
-			if (result.isConfirmed) {
-				window.location.href = deleteLink;
-			}
-		});
-	});
-	
-	$('#csvButton').click(function (e) {
-	    e.preventDefault();
-	    var exportLink = $(this).attr('href');
-	    Swal.fire({
-	        title: 'Export CSV',
-	        text: 'Are you sure you want to export CSV?',
-	        icon: 'question',
-	        showCancelButton: true,
-	        confirmButtonText: 'Yes, export it!',
-	        cancelButtonText: 'Cancel'
-	    }).then((result) => {
-	    	if (result.isConfirmed) {
-				window.location.href = exportLink;
-			}
-	    });
-	});
-	
-	$('#excelButton').click(function (e) {
-	    e.preventDefault();
-	    var exportLink = $(this).attr('href');
-	    Swal.fire({
-	        title: 'Export Excel',
-	        text: 'Are you sure you want to export Excel?',
-	        icon: 'question',
-	        showCancelButton: true,
-	        confirmButtonText: 'Yes, export it!',
-	        cancelButtonText: 'Cancel'
-	    }).then((result) => {
-	    	if (result.isConfirmed) {
-				window.location.href = exportLink;
-			}
-	    });
-	});
-	
-	$('#pdfButton').click(function (e) {
-	    e.preventDefault();
-	    var exportLink = $(this).attr('href');
-	    Swal.fire({
-	        title: 'Export PDF',
-	        text: 'Are you sure you want to export PDF?',
-	        icon: 'question',
-	        showCancelButton: true,
-	        confirmButtonText: 'Yes, export it!',
-	        cancelButtonText: 'Cancel'
-	    }).then((result) => {
-	    	if (result.isConfirmed) {
-				window.location.href = exportLink;
-			}
-	    });
-	});
-
 </script>

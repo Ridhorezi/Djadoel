@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Djadoel | Account Details</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Account
+						Details</li>
+				</ol>
+				<form th:action="@{/account/update}" th:object="${user}"
+					class="form-horizontal" method="post" enctype="multipart/form-data">
+					<input th:field="*{id}" type="hidden" />
+					<div class="mb-3">
+						<label>Email :</label> <input th:field="*{email}" type="email"
+							class="form-control" readonly="readonly" />
+					</div>
+					<div class="mb-3">
+						<label>First Name :</label> <input th:field="*{firstName}"
+							type="text" class="form-control" required="required"
+							minlength="1" maxlength="45" placeholder="First Name" />
+					</div>
+					<div class="mb-3">
+						<label>Last Name :</label> <input th:field="*{lastName}"
+							type="text" class="form-control" required="required"
+							minlength="1" maxlength="45" placeholder="Last Name" />
+					</div>
+					<div class="mb-3">
+						<label>Password :</label> <input th:field="*{password}"
+							type="password" class="form-control" minlength="5" maxlength="50"
+							placeholder="leave blank if you don't want to change password"
+							oninput="checkPasswordMatch(document.getElementById('confirmPassword'))" />
+					</div>
+					<div class="mb-3">
+						<label>Confirm Password :</label> <input id="confirmPassword"
+							type="password" class="form-control" minlength="5" maxlength="50"
+							placeholder="leave blank if you don't want to change password"
+							oninput="checkPasswordMatch(this)" />
+					</div>
+					<div class="mb-3 row pt-2">
+						<label class="mb-1">Assigned Roles : <span>
+								[[${user.roles}]] </span></label>
+						<div class="col-sm-8"></div>
+					</div>
+					<div class="mb-3">
+						<label>Photos</label> <input type="hidden" th:field="*{photos}" />
+						<input type="file" id="fileImage" name="image"
+							accept="image/png, image/jpeg" class="form-control"> <img
+							th:src="@{${user.photosImagePath}}" id="thumbnail"
+							alt="thumbnail" class="img-fluid img-thumbnail" width="120"
+							style="margin-top: 1%;">
+					</div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
+						<div class="d-flex align-items-start gap-3">
+							<input type="submit" value="Update" class="btn btn-primary"></input>
+							<input type="button" value="Cancel"
+								class="btn btn-light-danger text-danger" id="buttonCancel"></input>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_users.js}"></script>
+
+<script type="text/javascript">
+	moduleURL = "[[@{/}]]";
+
+	var updateMessage = "[[${updateMessage}]]";
+
+	if (updateMessage === "success") {
+		Toast.fire({
+			icon : "success",
+			text : "Your account details have been updated.",
+		});
+	} else if (updateMessage === "error") {
+		Swal.fire({
+			icon : "info",
+			title : "Info !",
+			text : "Ups, something when wrong!",
+			showCloseButton : true,
+		});
+	}
+</script>
+
+<style type="text/css">
+.title-class {
+	font-size: 17px !important;
+}
+</style>

@@ -60,6 +60,7 @@ INDEX VERSION 1.131+D:\project-java-spring\DjadoelEcommerce\.metadata\.plugins\o
 3608313564.index
 3681838777.index
 562977075.index
+402409884.index
 65834952.index
 2141485754.index
 1422870583.index
@@ -92,6 +93,7 @@ INDEX VERSION 1.131+D:\project-java-spring\DjadoelEcommerce\.metadata\.plugins\o
 1571633827.index
 1107717947.index
 1865797976.index
+2010712303.index
 1817482536.index
 825307997.index
 299077828.index
