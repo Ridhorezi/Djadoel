@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Djadoel | Admin Panel</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="col-md-12">
+			<div class="error-template">
+				<h1>Oops!</h1>
+				<h2>401 Unauthorized.</h2>
+				<div class="error-details">Sorry, you do not have permission
+					to access this page.</div>
+				<div class="error-actions">
+					<a th:href="@{/}" class="btn btn-primary btn-lg"><span
+						class="ti ti-layout-dashboard"></span> Back to Dashboard </a><a
+						href="https://wa.me/62812121212?text=Hello djadoel support team!"
+						class="btn btn-light btn-lg"><span class="ti ti-phone"></span>
+						Contact Support </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<style>
+.error-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+.error-actions {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.error-actions .btn {
+	margin-right: 10px;
+}
+</style>
+
