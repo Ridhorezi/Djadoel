@@ -69,3 +69,17 @@ k
 ;src/main/java/com/djadoel/admin/user/AccountController.java,f\b\fb371e2a1ea0ef5e631bb2f17395df340e7980dc
 ^
 .src/main/resources/templates/account_form.html,7\4\74e6bc3dbb778b6828657bbce970bb246e4bc83e
+s
+Csrc/main/java/com/djadoel/admin/user/controller/UserController.java,1\7\17d04da0187163d1e6c4f635ddd7a6eb6f9fb0a5
+V
+&src/main/resources/static/js/common.js,f\8\f8a6b8e6189cae5a2f4667a039d6da9135263e8c
+[
++src/main/resources/static/js/common_user.js,6\2\6280f48cf08cbf951f7c4bb44f52328c3f0316be
+\
+,src/main/resources/static/js/common_users.js,5\0\50ddb3ded6cbdcf45c608bc598663a5abd152314
+Z
+*src/main/resources/static/js/common_all.js,2\4\242504e172b3311da7ff99e1c4b5f686e8b81c05
+_
+/src/main/resources/templates/users/account.html,b\2\b2fbb5f068297d7f40e6d185de5d0b137f6af2a5
+v
+Fsrc/main/java/com/djadoel/admin/user/controller/AccountController.java,9\1\912a05ea75476d1482ebbc937dc1f1bd42a3fc8c
