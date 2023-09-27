@@ -7,13 +7,11 @@ import java.util.Date;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas utilitas untuk mengelola ekspor data dengan mengatur header respons HTTP.
-// Kode:
-//  - setResponseHeader(HttpServletResponse response, String contentType, String extension): 
-// Metode untuk mengatur header respons HTTP saat mengekspor data.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 public class AbstractExporter {
 

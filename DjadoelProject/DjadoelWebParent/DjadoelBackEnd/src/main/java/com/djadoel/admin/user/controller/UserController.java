@@ -25,23 +25,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas controller yang mengelola permintaan terkait pengguna (user) dalam aplikasi.
-// Kode:
-//  - @Controller: Anotasi Spring yang menandakan bahwa kelas ini adalah komponen controller.
-//  - @Autowired: Digunakan untuk menyuntikkan dependensi ke dalam controller.
-//  - private UserService service: Dependensi yang disuntikkan ke dalam controller untuk mengakses logika bisnis terkait pengguna.
-//  - @GetMapping("/users"): Menangani permintaan GET ke "/users" untuk menampilkan daftar pengguna.
-//  - @GetMapping("/users/create"): Menangani permintaan GET ke "/users/create" untuk menampilkan halaman pembuatan pengguna baru.
-//  - @GetMapping("/users/edit/{id}"): Menangani permintaan GET ke "/users/edit/{id}" untuk menampilkan halaman pengeditan pengguna berdasarkan ID.
-//  - @PostMapping("/users/save"): Menangani permintaan POST ke "/users/save" untuk menyimpan atau memperbarui pengguna.
-//  - @GetMapping("/users/{id}/enabled/{status}"): Menangani permintaan GET ke "/users/{id}/enabled/{status}" untuk mengubah status pengguna (aktif/tidak aktif).
-//  - @GetMapping("/users/delete/{id}"): Menangani permintaan GET ke "/users/delete/{id}" untuk menghapus pengguna berdasarkan ID.
-//  - @GetMapping("/users/export/csv"): Menangani permintaan GET ke "/users/export/csv" untuk mengekspor daftar pengguna dalam format CSV.
-//  - @GetMapping("/users/export/excel"): Menangani permintaan GET ke "/users/export/excel" untuk mengekspor daftar pengguna dalam format Excel.
-//  - @GetMapping("/users/export/pdf"): Menangani permintaan GET ke "/users/export/pdf" untuk mengekspor daftar pengguna dalam format PDF.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 @Controller
 public class UserController {
@@ -58,7 +46,7 @@ public class UserController {
 	}
 
 	@GetMapping("/users/create")
-	public String insert(Model model) {
+	public String create(Model model) {
 		List<Role> listRoles = service.listRoles();
 		User user = new User();
 		user.setEnabled(true);
@@ -86,37 +74,69 @@ public class UserController {
 	}
 
 	@PostMapping("/users/save")
-	public String save(User user, RedirectAttributes redirectAttributes,
-	        @RequestParam("image") MultipartFile multipartFile) {
-	    String messageKey = user.getId() == null ? "addMessage" : "updateMessage";
-	    try {
-	        String fileName = processImage(user, multipartFile);
-	        service.encodePassword(user);
-	        User savedUser = service.save(user);
-	        redirectAttributes.addFlashAttribute(messageKey, "success");
-	    } catch (IOException exception) {
-	        if (!multipartFile.isEmpty()) {
-	            redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
-	        }
-	    }
+	public String insert(User user, RedirectAttributes redirectAttributes,
+			@RequestParam("image") MultipartFile multipartFile) {
+		String messageKey = "addMessage";
 
-	    return "redirect:/users";
+		try {
+			if (!multipartFile.isEmpty()) {
+				String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+				user.setPhotos(fileName);
+				User savedUser = service.insert(user);
+				String uploadDirectory = "user-photos/" + savedUser.getId();
+				FileUploadUtil.cleanDirectory(uploadDirectory);
+				FileUploadUtil.saveFile(uploadDirectory, fileName, multipartFile);
+			} else {
+				user.setPhotos(null); // Set image null if file not uploaded!
+				User savedUser = service.insert(user);
+			}
+
+			redirectAttributes.addFlashAttribute(messageKey, "success");
+		} catch (IOException exception) {
+			if (!multipartFile.isEmpty()) {
+				redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
+			}
+		}
+
+		return "redirect:/users";
 	}
 
+	@PostMapping("/users/update")
+	public String update(User user, RedirectAttributes redirectAttributes,
+			@RequestParam("image") MultipartFile multipartFile) {
 
-	private String processImage(User user, MultipartFile multipartFile) throws IOException {
-		if (multipartFile.isEmpty()) {
-			user.setPhotos(null); // Set image null if file not uploaded!
-			return null;
+		String messageKey = "updateMessage";
+
+		try {
+			if (!multipartFile.isEmpty()) {
+				String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+
+				user.setPhotos(fileName);
+
+				User savedUser = service.update(user);
+
+				String uploadDirectory = "user-photos/" + savedUser.getId();
+
+				FileUploadUtil.cleanDirectory(uploadDirectory);
+
+				FileUploadUtil.saveFile(uploadDirectory, fileName, multipartFile);
+			} else {
+
+				if (user.getPhotos().isEmpty())
+					user.setPhotos(null);
+
+				service.update(user);
+			}
+
+			redirectAttributes.addFlashAttribute(messageKey, "success");
+
+		} catch (IOException exception) {
+
+			redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
+
 		}
-		String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-		user.setPhotos(fileName);
-		User savedUser = service.save(user);
-		String uploadDirectory = "user-photos/" + savedUser.getId();
-		FileUploadUtil.cleanDirectory(uploadDirectory);
-		FileUploadUtil.saveFile(uploadDirectory, fileName, multipartFile);
 
-		return fileName;
+		return "redirect:/users";
 	}
 
 	@GetMapping("/users/{id}/enabled/{status}")

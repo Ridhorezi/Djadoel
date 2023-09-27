@@ -9,18 +9,19 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Comparator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas utilitas untuk mengelola upload file.
-// Kode:
-// 	- saveFile(): Metode untuk menyimpan file yang diupload.
-// 	- cleanDirectory(): Metode untuk membersihkan isi direktori.
-// 	- deleteDirectory(): Metode untuk menghapus direktori beserta isinya.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 public class FileUploadUtil {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(FileUploadUtil.class);
 
 	public static void saveFile(String uploadDirectory, String fileName, MultipartFile multipartFile)
 			throws IOException {
@@ -48,11 +49,13 @@ public class FileUploadUtil {
 					try {
 						Files.delete(file);
 					} catch (IOException exception) {
+						LOGGER.error("Could not delete file: " + file);
 						System.out.println("Could not delete file: " + file);
 					}
 				}
 			});
 		} catch (IOException exception) {
+			LOGGER.error("Could not delete file: " + directoryPath);
 			System.out.println("Could not list directory: " + directoryPath);
 		}
 	}

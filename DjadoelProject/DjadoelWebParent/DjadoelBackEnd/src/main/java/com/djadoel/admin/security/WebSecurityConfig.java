@@ -2,8 +2,10 @@ package com.djadoel.admin.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
@@ -12,15 +14,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas konfigurasi untuk mengatur keamanan web dengan Spring Security.
-// Kode:
-//  - @EnableWebSecurity: Anotasi yang mengaktifkan konfigurasi keamanan web.
-//  - PasswordEncoder(): Metode yang mengembalikan bean PasswordEncoder untuk mengenkripsi kata sandi.
-//  - securityFilterChain(HttpSecurity http): Metode untuk mengatur konfigurasi akses ke URL.
-//  - WebSecurityCustomizer(): Metode untuk mengijinkan resource libs, css, js, dan images.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 @Configuration
 @EnableWebSecurity
@@ -37,21 +35,21 @@ public class WebSecurityConfig {
 	}
 
 	@Bean
-	public DaoAuthenticationProvider authenticationProvider() {
-		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setUserDetailsService(userDetailsService());
-		authProvider.setPasswordEncoder(passwordEncoder());
-
-		return authProvider;
+	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+		return config.getAuthenticationManager();
 	}
 
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.authenticationProvider(authenticationProvider());
+	@Bean
+	public AuthenticationProvider authenticationProvider() {
+		final DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+		authenticationProvider.setUserDetailsService(userDetailsService());
+		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		return authenticationProvider;
 	}
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/users/**").hasAnyAuthority("Admin")
+		http.csrf().disable().authorizeHttpRequests(authorize -> authorize.requestMatchers("/users/**").hasAnyAuthority("Admin")
 				.requestMatchers("/categories/**").hasAnyAuthority("Admin", "Editor").requestMatchers("/brands/**")
 				.hasAnyAuthority("Admin", "Editor").requestMatchers("/products/**")
 				.hasAnyAuthority("Admin", "Editor", "Sales", "Shipper").requestMatchers("/customers/**")

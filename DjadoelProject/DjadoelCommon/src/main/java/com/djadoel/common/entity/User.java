@@ -19,28 +19,6 @@ import jakarta.persistence.Transient;
 // IDE: Spring Tool Suite 4
 // Information: ridhosuhaebi01@gmail.com
 // Fungsi: Kelas entitas yang mewakili pengguna (user) dalam aplikasi.
-// Kode:
-//  - User(): Konstruktor tanpa parameter.
-//  - User(String email, String password, String firstName, String lastName): Konstruktor dengan parameter email, password, nama depan, dan nama belakang pengguna.
-//  - getId(): Metode getter untuk mendapatkan ID pengguna.
-//  - setId(Integer id): Metode setter untuk mengatur ID pengguna.
-//  - getEmail(): Metode getter untuk mendapatkan alamat email pengguna.
-//  - setEmail(String email): Metode setter untuk mengatur alamat email pengguna.
-//  - getPassword(): Metode getter untuk mendapatkan kata sandi pengguna.
-//  - setPassword(String password): Metode setter untuk mengatur kata sandi pengguna.
-//  - getFirstName(): Metode getter untuk mendapatkan nama depan pengguna.
-//  - setFirstName(String firstName): Metode setter untuk mengatur nama depan pengguna.
-//  - getLastName(): Metode getter untuk mendapatkan nama belakang pengguna.
-//  - setLastName(String lastName): Metode setter untuk mengatur nama belakang pengguna.
-//  - getPhotos(): Metode getter untuk mendapatkan nama foto pengguna.
-//  -  setPhotos(String photos): Metode setter untuk mengatur nama foto pengguna.
-//  - isEnabled(): Metode getter untuk memeriksa apakah pengguna diaktifkan.
-//  - setEnabled(boolean enabled): Metode setter untuk mengatur status aktivasi pengguna.
-//  - getRoles(): Metode getter untuk mendapatkan peran (role) yang dimiliki pengguna.
-//  - setRoles(Set<Role> roles): Metode setter untuk mengatur peran (role) pengguna.
-//  - addRole(Role role): Metode untuk menambahkan peran (role) ke daftar peran pengguna.
-//  - toString(): Metode untuk mengubah objek pengguna menjadi string (menampilkan ID, alamat email, nama depan, nama belakang, dan daftar peran).
-//  - getPhotosImagePath(): Metode untuk mendapatkan path (lokasi) gambar profil pengguna.
 
 @Entity
 @Table(name = "users")
