@@ -11,14 +11,11 @@ import org.supercsv.prefs.CsvPreference;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas utilitas untuk mengekspor daftar pengguna ke dalam format CSV.
-// Kode:
-//  - export(List<User> listUsers, HttpServletResponse response): Metode ini digunakan untuk mengekspor daftar pengguna ke dalam format CSV.
-//  - listUsers: Parameter berisi daftar pengguna yang akan diekspor.
-//  - response: Parameter yang mewakili objek HttpServletResponse untuk mengirim tanggapan HTTP.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 public class UserCsvExporter extends AbstractExporter {
 

@@ -2,6 +2,12 @@
 <!--  Header Start -->
 <header th:fragment="header" class="app-header"
 	xmlns:th="http://www.w3.org/1999/xhtml">
+	<div th:if="${param.continue}"
+		class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+		<span class="bi bi-success">Login successfully, Welcome back!</span>
+		<button type="button" class="btn-close" data-bs-dismiss="alert"
+			aria-label="Close" onclick="removeLoginParam()"></button>
+	</div>
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<ul class="navbar-nav">
 			<li class="nav-item d-block d-xl-none"><a

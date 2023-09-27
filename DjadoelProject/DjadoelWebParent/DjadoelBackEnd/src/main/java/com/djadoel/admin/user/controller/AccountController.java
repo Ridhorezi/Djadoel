@@ -18,6 +18,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4	
+ * Information: ridhosuhaebi01@gmail.com
+*/
+
 @Controller
 public class AccountController {
 

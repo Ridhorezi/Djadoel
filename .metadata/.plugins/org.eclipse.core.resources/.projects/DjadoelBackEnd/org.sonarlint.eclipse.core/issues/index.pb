@@ -69,8 +69,6 @@ _
 /src/main/resources/templates/users/account.html,b\2\b2fbb5f068297d7f40e6d185de5d0b137f6af2a5
 v
 Fsrc/main/java/com/djadoel/admin/user/controller/AccountController.java,9\1\912a05ea75476d1482ebbc937dc1f1bd42a3fc8c
-V
-&src/main/resources/templates/error/403,6\3\63fae2a8da2d6b26e7bff4e77da2c50d3e3f5154
 [
 +src/main/resources/templates/error/404.html,8\6\86ab23eafdb6c42007ea36ad265189b900f5bb37
 [
@@ -79,3 +77,9 @@ V
 +src/main/resources/templates/error/401.html,4\e\4ea2ebf3c212f23d6513e351d921c5a079f91927
 [
 +src/main/resources/templates/error/500.html,2\8\2811cddb27664e77c155720aa9f9b2b6b3a24472
+C
+Djadoel-Backend.log,c\b\cb9ade3cdff018d805db40c85d2e342edbc46ee9
+Y
+)src/main/resources/static/js/dashboard.js,0\1\0115b0e246d5a71bd59fea2d0d983a2963820261
+[
++src/main/resources/static/js/common_auth.js,8\8\882187ad446dcc591940e724ab66320d6259cbfb

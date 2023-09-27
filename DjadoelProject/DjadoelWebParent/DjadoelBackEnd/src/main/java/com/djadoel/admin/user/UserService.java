@@ -12,19 +12,11 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas Service untuk mengelola entitas User.
-// Kode:
-//  - listAll(): Metode untuk mendapatkan daftar semua pengguna.
-//  - listRoles(): Metode untuk mendapatkan daftar semua peran.
-//  - encodePassword(User user): Metode untuk mengenkripsi kata sandi pengguna.
-//  - isEmailUnique(Integer id, String email): Metode untuk memeriksa apakah alamat email unik.
-//  - save(User user): Metode untuk menyimpan atau memperbarui pengguna.
-//  - get(Integer id): Metode untuk mendapatkan pengguna berdasarkan ID.
-//  - delete(Integer id): Metode untuk menghapus pengguna berdasarkan ID.
-//  - updateUserEnabledStatus(Integer id, boolean enabled): Metode untuk memperbarui status pengguna (Aktif/Tidak Aktif) berdasarkan ID.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 @Service
 @Transactional
@@ -52,7 +44,8 @@ public class UserService {
 	}
 
 	public void encodePassword(User user) {
-		String encodedPassword = passwordEncoder.encode(user.getPassword());
+		String rawPassword = user.getPassword();
+		String encodedPassword = passwordEncoder.encode(rawPassword);
 		user.setPassword(encodedPassword);
 	}
 
@@ -75,23 +68,62 @@ public class UserService {
 
 		return true;
 	}
+	
+	public User insert(User user) {
+	    encodePassword(user); // Enkripsi kata sandi
 
-	public User save(User user) {
-
-		boolean isUpdatingUser = (user.getId() != null);
-
-		encodePassword(user);
-
-		if (isUpdatingUser) {
-
-			User existingUser = userRepo.findById(user.getId()).get();
-
-			if (user.getPassword().isEmpty())
-				user.setPassword(existingUser.getPassword());
-		}
-
-		return userRepo.save(user);
+	    return userRepo.save(user); // Simpan pengguna ke basis data
 	}
+	
+	public User update(User user) {
+	    // Mendapatkan pengguna yang ada di basis data berdasarkan ID
+	    User existingUser = userRepo.findById(user.getId()).orElse(null);
+
+	    if (existingUser == null) {
+	        // Handle jika pengguna tidak ditemukan
+	        return null;
+	    }
+
+	    // Memeriksa apakah ada perubahan pada password
+	    if (!user.getPassword().isEmpty()) {
+	        // Jika ada password baru, menggantinya dan mengenkripsi
+	        existingUser.setPassword(user.getPassword());
+	        encodePassword(existingUser);
+	    }
+
+	    // Memeriksa apakah ada perubahan pada foto profil
+	    if (user.getPhotos() != null) {
+	        existingUser.setPhotos(user.getPhotos());
+	    }
+
+	    // Mengupdate informasi lainnya
+	    existingUser.setFirstName(user.getFirstName());
+	    existingUser.setLastName(user.getLastName());
+
+	    // Menyimpan perubahan ke dalam basis data
+	    return userRepo.save(existingUser);
+	}
+
+//	public User save(User user) {
+//
+//		boolean isUpdatingUser = (user.getId() != null);
+//
+//		if (isUpdatingUser) {
+//
+//			User existingUser = userRepo.findById(user.getId()).get();
+//
+//			if (user.getPassword().isEmpty()) {
+//				user.setPassword(existingUser.getPassword());
+//			} else {
+//				encodePassword(user);
+//			}
+//
+//		} else {
+//			encodePassword(user);
+//		}
+//
+//		return userRepo.save(user);
+//	}
 
 	public User get(Integer id) throws UserNotFoundException {
 		try {
