@@ -15,16 +15,17 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas entitas yang mewakili pengguna (user) dalam aplikasi.
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 @Entity
 @Table(name = "users")
 public class User {
 
-// Initialized entity and column
+	// Initialized entity and column
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,7 +53,7 @@ public class User {
 
 	private Set<Role> roles = new HashSet<>();
 
-// Implement Constructor	
+	// Implement Constructor	
 
 	public User() {
 
@@ -65,7 +66,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
-// Implement Getter & Setter
+	// Implement Getter & Setter
 
 	public Integer getId() {
 		return id;
@@ -135,7 +136,7 @@ public class User {
 		this.roles.add(role);
 	}
 
-// Implement id, email, firsname, lastname, and roles to string
+	// Implement id, email, firsname, lastname, and roles to string
 
 	@Override
 	public String toString() {

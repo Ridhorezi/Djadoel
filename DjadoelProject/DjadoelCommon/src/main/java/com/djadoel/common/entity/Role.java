@@ -7,30 +7,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-// Created by: Ridho Suhaebi Arrowi
-// IDE: Spring Tool Suite 4
-// Information: ridhosuhaebi01@gmail.com
-// Fungsi: Kelas entitas yang mewakili peran (role) dalam aplikasi.
-// Kode:
-//  - Role(): Konstruktor tanpa parameter.
-//  - Role(Integer id): Konstruktor dengan parameter ID.
-//  - Role(String name): Konstruktor dengan parameter nama peran.
-//  - Role(String name, String description): Konstruktor dengan parameter nama peran dan deskripsi peran.
-//  - getId(): Metode getter untuk mendapatkan ID peran.
-//  - setId(Integer id): Metode setter untuk mengatur ID peran.
-//  - getName(): Metode getter untuk mendapatkan nama peran.
-//  - setName(String name): Metode setter untuk mengatur nama peran.
-//  - getDescription(): Metode getter untuk mendapatkan deskripsi peran.
-//  - setDescription(String description): Metode setter untuk mengatur deskripsi peran.
-//  - hashCode(): Metode untuk menghasilkan kode hash berdasarkan ID peran.
-//  - equals(Object obj): Metode untuk memeriksa kesamaan dua objek peran berdasarkan ID.
-//  - toString(): Metode untuk mengubah objek peran menjadi string (menggunakan nama peran).
+/* 
+ * Created by: Ridho Suhaebi Arrowi
+ * IDE: Spring Tool Suite 4
+ * Information: ridhosuhaebi01@gmail.com
+*/
 
 @Entity
 @Table(name = "roles")
 public class Role {
 
-// Initialized entity and column
+	// Initialized entity and column
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,7 +29,7 @@ public class Role {
 	@Column(length = 150, nullable = false)
 	private String description;
 
-//	Implement Constructor
+	//	Implement Constructor
 
 	public Role() {
 
@@ -61,7 +48,7 @@ public class Role {
 		this.description = description;
 	}
 
-// Implement Getter & Setter	
+	// Implement Getter & Setter	
 
 	public Integer getId() {
 		return id;
@@ -87,7 +74,7 @@ public class Role {
 		this.description = description;
 	}
 
-// Implement hash id	
+	// Implement hash id	
 
 	@Override
 	public int hashCode() {
@@ -97,7 +84,7 @@ public class Role {
 		return result;
 	}
 
-// Implement hash id		
+	// Implement hash id		
 
 	@Override
 	public boolean equals(Object obj) {
@@ -116,7 +103,7 @@ public class Role {
 		return true;
 	}
 
-// Implement name to string		
+	// Implement name to string		
 
 	@Override
 	public String toString() {

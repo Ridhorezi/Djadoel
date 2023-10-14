@@ -68,62 +68,41 @@ public class UserService {
 
 		return true;
 	}
-	
+
 	public User insert(User user) {
-	    encodePassword(user); // Enkripsi kata sandi
+		encodePassword(user); // Enkripsi kata sandi
 
-	    return userRepo.save(user); // Simpan pengguna ke basis data
+		return userRepo.save(user); // Simpan pengguna ke basis data
 	}
-	
+
 	public User update(User user) {
-	    // Mendapatkan pengguna yang ada di basis data berdasarkan ID
-	    User existingUser = userRepo.findById(user.getId()).orElse(null);
+		// Mendapatkan pengguna yang ada di basis data berdasarkan ID
+		User existingUser = userRepo.findById(user.getId()).orElse(null);
 
-	    if (existingUser == null) {
-	        // Handle jika pengguna tidak ditemukan
-	        return null;
-	    }
+		if (existingUser == null) {
+			// Handle jika pengguna tidak ditemukan
+			return null;
+		}
 
-	    // Memeriksa apakah ada perubahan pada password
-	    if (!user.getPassword().isEmpty()) {
-	        // Jika ada password baru, menggantinya dan mengenkripsi
-	        existingUser.setPassword(user.getPassword());
-	        encodePassword(existingUser);
-	    }
+		// Memeriksa apakah ada perubahan pada password
+		if (!user.getPassword().isEmpty()) {
+			// Jika ada password baru, menggantinya dan mengenkripsi
+			existingUser.setPassword(user.getPassword());
+			encodePassword(existingUser);
+		}
 
-	    // Memeriksa apakah ada perubahan pada foto profil
-	    if (user.getPhotos() != null) {
-	        existingUser.setPhotos(user.getPhotos());
-	    }
+		// Memeriksa apakah ada perubahan pada foto profil
+		if (user.getPhotos() != null) {
+			existingUser.setPhotos(user.getPhotos());
+		}
 
-	    // Mengupdate informasi lainnya
-	    existingUser.setFirstName(user.getFirstName());
-	    existingUser.setLastName(user.getLastName());
+		// Mengupdate informasi lainnya
+		existingUser.setFirstName(user.getFirstName());
+		existingUser.setLastName(user.getLastName());
 
-	    // Menyimpan perubahan ke dalam basis data
-	    return userRepo.save(existingUser);
+		// Menyimpan perubahan ke dalam basis data
+		return userRepo.save(existingUser);
 	}
-
-//	public User save(User user) {
-//
-//		boolean isUpdatingUser = (user.getId() != null);
-//
-//		if (isUpdatingUser) {
-//
-//			User existingUser = userRepo.findById(user.getId()).get();
-//
-//			if (user.getPassword().isEmpty()) {
-//				user.setPassword(existingUser.getPassword());
-//			} else {
-//				encodePassword(user);
-//			}
-//
-//		} else {
-//			encodePassword(user);
-//		}
-//
-//		return userRepo.save(user);
-//	}
 
 	public User get(Integer id) throws UserNotFoundException {
 		try {

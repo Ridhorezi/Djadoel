@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
+	<item key="GitSelectRepositoryPage.lastRepository" value="D:\project-java-spring\DjadoelEcommerce\.git"/>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
 		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
@@ -21,5 +23,8 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="GitImportWizard">
+		<item key="GitProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
 	</section>
 </section>

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{layouts/main_layout}">
+<head>
+<title>Djadoel | [[#{category.title}]]</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{category.breadcrumb}]]</li>
+				</ol>
+
+				<div id="file_export_wrapper" class="dataTables_wrapper">
+					<div class="dt-buttons mb-3">
+						<div
+							th:replace="~{fragments/fragment :: buttonAdd('category', '/categories/create')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportCsv('category', '/categories/export/csv')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportExcel('category', '/categories/export/excel')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportPdf('category', '/categories/export/pdf')}"></div>
+					</div>
+				</div>
+
+				<div class="table-responsive">
+					<table id="datatable"
+						class="table dt-responsive table-hover nowrap w-100">
+						<thead>
+							<tr>
+								<th>[[#{category.id}]]</th>
+								<th>[[#{category.image}]]</th>
+								<th>[[#{category.name}]]</th>
+								<th>[[#{category.alias}]]</th>
+								<th>[[#{category.enabled}]]</th>
+								<th>[[#{category.action}]]</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="category : ${listCategories}">
+								<td>[[${category.id}]]</td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: thumbnail(${category.image}, ${category.imagePath})}"></div>
+								</td>
+								<td>[[${category.name}]]</td>
+								<td>[[${category.alias}]]</td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: toggleStatus(${category.enabled}, 'category', '/categories/' + ${category.id})}"></div>
+								</td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: buttonEdit('category', '/categories/edit/' + ${category.id})}"></div>
+
+									&nbsp;
+									<div
+										th:replace="~{fragments/fragment :: buttonDelete('category', '/categories/delete/' + ${category.id}, ${category.hasChildren == false})}"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_category.js}"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var addMessage = "[[${addMessage}]]";
+		var updateMessage = "[[${updateMessage}]]";
+		var deleteMessage = "[[${deleteMessage}]]";
+		var statusMessage = "[[${statusMessage}]]";
+		var infoMessage = "[[${infoMessage}]]";
+
+		if (addMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The category has been successfully saved",
+			});
+		} else if (addMessage === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error !",
+				text : "Ups! something when wrong.",
+				showCloseButton : true,
+			});
+		} else if (updateMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The category has been successfully updated",
+			});
+		} else if (updateMessage === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error !",
+				text : "Ups! something when wrong.",
+				showCloseButton : true,
+			});
+		} else if (deleteMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The category has been successfully deleted",
+			});
+		} else if (statusMessage && statusMessage !== "undefined") {
+			Toast.fire({
+				icon : "success",
+				text : statusMessage,
+			});
+		} else if (infoMessage && infoMessage !== "undefined") {
+			Swal.fire({
+				icon : "info",
+				title : "Info !",
+				text : infoMessage,
+				showCloseButton : true,
+			});
+		}
+	});
+</script>

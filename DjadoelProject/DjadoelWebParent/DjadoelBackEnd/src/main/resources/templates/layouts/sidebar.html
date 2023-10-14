@@ -1,0 +1,159 @@
+<!-- Sidebar Start -->
+<aside th:fragment="sidebar" class="left-sidebar"
+	xmlns:th="http://www.w3.org/1999/xhtml">
+	<!-- Sidebar scroll-->
+	<div>
+		<div
+			class="brand-logo d-flex align-items-center justify-content-between">
+			<a th:href="@{/}" class="text-nowrap logo-img"> <img
+				th:src="@{/images/Logo-Djadoel.png}" width="150" alt="Logo" />
+			</a>
+			<div
+				class="close-btn d-lg-none d-block sidebartoggler cursor-pointer"
+				id="sidebarCollapse">
+				<i class="ti ti-x fs-8"></i>
+			</div>
+		<!-- 	[[#{login.title}]] -->
+		</div>
+		<!-- Sidebar navigation-->
+		<nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+			<ul id="sidebarnav">
+				<li class="sidebar-item"><a class="sidebar-link" th:href="@{/}"
+					aria-expanded="false"> <span> <i
+							class="ti ti-layout-dashboard"></i>
+					</span> <span class="hide-menu" th:text="#{menu.dashboard}">Dashboard</span>
+				</a></li>
+
+				<li class="sidebar-item" sec:authorize="hasAuthority('Admin')"><a
+					class="sidebar-link" th:href="@{/users}" aria-expanded="false">
+						<span> <i class="ti ti-users"></i>
+					</span> <span class="hide-menu" th:text="#{menu.users}">Users</span>
+				</a></li>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/categories}" aria-expanded="false"> <span>
+								<i class="ti ti-category"></i>
+						</span> <span class="hide-menu" th:text="#{menu.categories}">Categories</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/brands}" aria-expanded="false"> <span> <i
+								class="ti ti-brand-appgallery"></i>
+						</span> <span class="hide-menu" th:text="#{menu.brands}">Brands</span>
+					</a></li>
+				</th:block>
+
+				<th:block
+					sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Sales', 'Shipper')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/products}" aria-expanded="false"> <span> <i
+								class="ti ti-brand-producthunt"></i>
+						</span> <span class="hide-menu" th:text="#{menu.products}">Products</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Assistant')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/questions}" aria-expanded="false"> <span> <svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-message-question"
+									width="22" height="22" viewBox="0 0 22 22" stroke-width="2"
+									stroke="currentColor" fill="none" stroke-linecap="round"
+									stroke-linejoin="round">
+								   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								   <path d="M8 9h8"></path>
+								   <path d="M8 13h6"></path>
+								   <path
+										d="M14 18h-1l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5"></path>
+								   <path d="M19 22v.01"></path>
+								   <path
+										d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"></path>
+								</svg>
+						</span> <span class="hide-menu" th:text="#{menu.questions}">Questions</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Assistant')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/reviews}" aria-expanded="false"> <span> <i
+								class="ti ti-zoom-check"></i>
+						</span> <span class="hide-menu" th:text="#{menu.reviews}">Reviews</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Sales')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/customers}" aria-expanded="false"> <span> <i
+								class="ti ti-users"></i>
+						</span> <span class="hide-menu" th:text="#{menu.customers}">Customers</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Sales')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/shipping}" aria-expanded="false"> <span> <i
+								class="ti ti-package"></i>
+						</span> <span class="hide-menu" th:text="#{menu.shipping}">Shipping</span>
+					</a></li>
+				</th:block>
+
+				<th:block
+					sec:authorize="hasAnyAuthority('Admin', 'Sales', 'Shipper')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/orders}" aria-expanded="false"> <span> <i
+								class="ti ti-credit-card"></i>
+						</span> <span class="hide-menu" th:text="#{menu.orders}">Orders</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Sales')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/report}" aria-expanded="false"> <span> <i
+								class="ti ti-report"></i>
+						</span> <span class="hide-menu" th:text="#{menu.salesreports}">Sales
+								Report</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/articles}" aria-expanded="false"> <span> <i
+								class="ti ti-article"></i>
+						</span> <span class="hide-menu" th:text="#{menu.articles}">Articles</span>
+					</a></li>
+				</th:block>
+
+				<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+					<li class="sidebar-item"><a class="sidebar-link"
+						th:href="@{/menus}" aria-expanded="false"> <span> <i
+								class="ti ti-menu"></i>
+						</span> <span class="hide-menu" th:text="#{menu.menus}">Menus</span>
+					</a></li>
+				</th:block>
+
+
+				<li class="sidebar-item" sec:authorize="hasAuthority('Admin')"><a
+					class="sidebar-link" th:href="@{/settings}" aria-expanded="false">
+						<span> <i class="ti ti-adjustments-horizontal"></i>
+					</span> <span class="hide-menu" th:text="#{menu.settings}">Settings</span>
+				</a></li>
+
+			</ul>
+			<div
+				class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+				<div class="d-flex">
+					<div class="unlimited-access-title me-3">
+						<h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Djadoel -
+							2023</h6>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- End Sidebar navigation -->
+	</div>
+	<!-- End Sidebar scroll-->
+</aside>
+<!--  Sidebar End -->

@@ -12,14 +12,14 @@
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="sidebar."/>
+			<item value="icom"/>
+			<item value="/pages"/>
+			<item value="pages/"/>
+			<item value="user"/>
 			<item value="forgot"/>
 			<item value="assista"/>
 			<item value="revie"/>
-			<item value="HREF"/>
-			<item value="style"/>
-			<item value="t.mount(l).then((function()"/>
-			<item value=" new Error(&quot;Element not found"/>
-			<item value="hash"/>
 		</list>
 		<list key="replacehistory">
 		</list>

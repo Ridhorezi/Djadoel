@@ -94,7 +94,7 @@ public class UserController {
 			redirectAttributes.addFlashAttribute(messageKey, "success");
 		} catch (IOException exception) {
 			if (!multipartFile.isEmpty()) {
-				redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
+				redirectAttributes.addFlashAttribute(messageKey, "error");
 			}
 		}
 
@@ -132,7 +132,7 @@ public class UserController {
 
 		} catch (IOException exception) {
 
-			redirectAttributes.addFlashAttribute(messageKey, exception.getMessage());
+			redirectAttributes.addFlashAttribute(messageKey, "error");
 
 		}
 
