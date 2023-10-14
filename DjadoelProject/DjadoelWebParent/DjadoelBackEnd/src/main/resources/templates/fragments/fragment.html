@@ -1,0 +1,97 @@
+<!-- list of reusable fragment -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<!-- fragment add -->
+	<div th:fragment="buttonAdd(entityName, addURL)" th:remove="tag">
+		<a th:href="@{${addURL}}"
+			class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-secondary mr-1"
+			tabindex="0" aria-controls="file_export"
+			th:title="'Add this ' + ${entityName}"> <i class="bi bi-plus"></i>
+			<span>[[#{button.add}]]</span>
+		</a>
+	</div>
+
+	<!-- fragment csv -->
+	<div th:fragment="buttonExportCsv(entityName, csvURL)" th:remove="tag">
+		<a th:href="@{${csvURL}}" id="csvButton"
+			class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-success mr-1"
+			tabindex="0" aria-controls="file_export"
+			th:title="'Export this ' + ${entityName}"> <i
+			class="bi bi-filetype-csv"></i> <span>[[#{button.csv}]]</span>
+		</a>
+	</div>
+
+	<!-- fragment excel -->
+	<div th:fragment="buttonExportExcel(entityName, excelURL)"
+		th:remove="tag">
+		<a th:href="@{${excelURL}}" id="excelButton"
+			class="dt-button btn-sm buttons-print btn btn-warning mr-1"
+			tabindex="0" aria-controls="file_export"
+			th:title="'Export this ' + ${entityName}"> <i
+			class="bi bi-file-earmark-excel"></i> <span>[[#{button.excel}]]</span>
+		</a>
+	</div>
+
+	<!-- fragment pdf -->
+	<div th:fragment="buttonExportPdf( entityName, pdfURL)" th:remove="tag">
+		<a th:href="@{${pdfURL}}" id="pdfButton"
+			class="dt-button btn-sm buttons-print btn btn-danger mr-1"
+			tabindex="0" aria-controls="file_export"
+			th:title="'Export this ' + ${entityName}"> <i
+			class="bi bi-file-pdf"></i> <span>[[#{button.pdf}]]</span>
+		</a>
+	</div>
+
+	<!-- fragment photos -->
+	<div th:fragment="photos(isNull, entityURL)" th:remove="tag">
+		<img th:if="${isNull != null}" th:src="@{${entityURL}}"
+			class="img-fluid img-thumbnail" width="60" alt="Image"> <img
+			th:if="${isNull == null}" th:src="@{/images/default-user.png}"
+			class="img-fluid img-thumbnail" width="60" alt="Image">
+	</div>
+
+	<!-- fragment thumbnail -->
+	<div th:fragment="thumbnail(isNull, entityURL)" th:remove="tag">
+		<img th:if="${isNull != null && isNull != 'default.png'}"
+			th:src="@{${entityURL}}" class="img-fluid img-thumbnail" width="60"
+			alt="Image"> <img
+			th:if="${isNull != null && isNull == 'default.png'}"
+			th:src="@{/images/default-image.jpg}" class="img-fluid img-thumbnail"
+			width="60" alt="Image">
+	</div>
+
+	<!-- fragment status -->
+	<div th:fragment="toggleStatus(enabled, entityName, entityURL)"
+		th:remove="tag">
+		<a th:if="${enabled == true}"
+			th:href="@{${entityURL} + '/enabled/false'}" class="bi bi-toggle-on"
+			style="font-size: 25px;" th:title="'Disabled this ' + ${entityName}"></a>
+		<a th:if="${enabled == false}"
+			th:href="@{${entityURL} + '/enabled/true'}" class="bi bi-toggle-off"
+			style="font-size: 25px;" th:title="'Enabled this ' + ${entityName}"></a>
+	</div>
+
+	<!-- fragment edit -->
+	<div th:fragment="buttonEdit(entityName, editURL)" th:remove="tag">
+		<a th:href="@{${editURL}}" class="btn btn-primary btn-sm"
+			th:title="'Edit this ' + ${entityName}"> <i
+			class="bi bi-pencil-square"></i> [[#{button.edit}]]
+		</a>
+	</div>
+
+	<!-- fragment delete -->
+	<div th:fragment="buttonDelete(entityName, deleteURL, visible)"
+		th:remove="tag">
+		<th:block th:if="${visible}">
+			<a th:href="@{${deleteURL}}" id="deleteButton"
+				class="btn btn-danger btn-sm"
+				th:title="'Delete this ' + ${entityName}"> <i
+				class="bi bi-trash"></i> [[#{button.delete}]]
+			</a>
+		</th:block>
+	</div>
+
+</body>
+</html>

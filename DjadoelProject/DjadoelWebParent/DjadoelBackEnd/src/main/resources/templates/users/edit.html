@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
-	layout:decorate="~{fragments/main_layout}">
+	layout:decorate="~{layouts/main_layout}">
 <head>
-<title>Djadoel | Users | Edit</title>
+<title>Djadoel | [[#{user.title}]] | [[#{user.titleedit}]]</title>
 </head>
 
 <body>
@@ -12,8 +12,8 @@
 				<ol class="breadcrumb mb-4">
 					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
 					<li class="breadcrumb-item active" aria-current="page"><a
-						th:href="@{/users}">Users</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Edit</li>
+						th:href="@{/users}">[[#{user.title}]]</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{user.titleedit}]]</li>
 				</ol>
 				<form th:action="@{/users/update}" th:object="${user}"
 					class="form-horizontal" method="post"
@@ -21,38 +21,43 @@
 					enctype="multipart/form-data">
 					<input th:field="*{id}" type="hidden" />
 					<div class="mb-3">
-						<label>Email :</label> <input th:field="*{email}" type="email"
-							class="form-control" required="required" minlength="5"
-							maxlength="128" placeholder="Email" />
+						<label th:text="#{user.email} + ':'">Email :</label> <input
+							th:field="*{email}" type="email" class="form-control"
+							required="required" minlength="5" maxlength="128"
+							placeholder="Email" />
 					</div>
 					<div class="mb-3">
-						<label>First Name :</label> <input th:field="*{firstName}"
-							type="text" class="form-control" required="required"
-							minlength="1" maxlength="45" placeholder="First Name" />
+						<label th:text="#{user.firstname} + ':'">First Name :</label> <input
+							th:field="*{firstName}" type="text" class="form-control"
+							required="required" minlength="1" maxlength="45"
+							placeholder="First Name" />
 					</div>
 					<div class="mb-3">
-						<label>Last Name :</label> <input th:field="*{lastName}"
-							type="text" class="form-control" required="required"
-							minlength="1" maxlength="45" placeholder="Last Name" />
+						<label th:text="#{user.lastname} + ':'">Last Name :</label> <input
+							th:field="*{lastName}" type="text" class="form-control"
+							required="required" minlength="1" maxlength="45"
+							placeholder="Last Name" />
 					</div>
 					<div class="mb-3">
-						<label>Password :</label> <input th:field="*{password}"
-							type="password" class="form-control" minlength="5" maxlength="50"
+						<label th:text="#{user.password} + ':'">Password :</label> <input
+							th:field="*{password}" type="password" class="form-control"
+							minlength="5" maxlength="50"
 							placeholder="leave blank if you don't want to change password"
 							oninput="checkPasswordMatch(document.getElementById('confirmPassword'))" />
 					</div>
 					<div class="mb-3">
-						<label>Confirm Password :</label> <input id="confirmPassword"
-							type="password" class="form-control" minlength="5" maxlength="50"
+						<label th:text="#{user.cpassword} + ':'">Confirm Password
+							:</label> <input id="confirmPassword" type="password"
+							class="form-control" minlength="5" maxlength="50"
 							placeholder="leave blank if you don't want to change password"
 							oninput="checkPasswordMatch(this)" />
 					</div>
 					<div class="mb-2 row pt-2">
-						<label class="mb-1">Roles :</label>
+						<label class="mb-1" th:text="#{user.roles} + ':'">Roles :</label>
 						<div class="col-sm-8">
 							<th:block th:each="role : ${listRoles}">
 								<div class="form-check">
-									<input th:text="${role.name}" th:value="${role.id}"
+									<input th:text="${role.name} + ':'" th:value="${role.id}"
 										th:field="*{roles}" type="checkbox" class="form-check-input" />
 									<label class="form-check-label">-
 										[[${role.description}]]</label>
@@ -61,7 +66,8 @@
 						</div>
 					</div>
 					<div class="mb-2 row">
-						<label class="mb-1">Enabled :</label>
+						<label class="mb-1" th:text="#{user.enabled} + ':'">Enabled
+							:</label>
 						<div class="col-sm-4">
 							<div class="form-check form-switch mb-3">
 								<input th:field="*{enabled}" class="form-check-input"
@@ -70,9 +76,10 @@
 						</div>
 					</div>
 					<div class="mb-3">
-						<label>Photos</label> <input type="hidden" th:field="*{photos}" />
-						<input type="file" id="fileImage" name="image"
-							accept="image/png, image/jpeg" class="form-control"> <img
+						<label th:text="#{user.photos} + ':'">Photos</label> <input
+							type="hidden" th:field="*{photos}" /> <input type="file"
+							id="fileImage" name="image" accept="image/png, image/jpeg"
+							class="form-control"> <img
 							th:src="@{${user.photosImagePath}}" id="thumbnail"
 							alt="thumbnail" class="img-fluid img-thumbnail" width="120"
 							style="margin-top: 1%;">
@@ -80,8 +87,9 @@
 					<div class="col-sm-3"></div>
 					<div class="col-sm-9">
 						<div class="d-flex align-items-start gap-3">
-							<input type="submit" value="Save" class="btn btn-primary"></input>
-							<input type="button" value="Cancel"
+							<input type="submit" th:value="#{button.update}"
+								class="btn btn-primary"></input> <input type="button"
+								th:value="#{button.cancel}"
 								class="btn btn-light-danger text-danger" id="buttonCancel"></input>
 						</div>
 					</div>

@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{layouts/main_layout}">
+<head>
+<title>Djadoel | [[#{category.title}]] |
+	[[#{category.titleedit}]]</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a
+						th:href="@{/categories}">[[#{category.title}]]</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{category.titleedit}]]</li>
+				</ol>
+				<form th:action="@{/categories/update}" th:object="${category}"
+					method="post" class="form-horizontal" enctype="multipart/form-data"
+					onsubmit="return checkUniqueCategories(this)">
+					<input th:field="*{id}" type="hidden" />
+					<div class="mb-3">
+						<label th:text="#{category.name} + ':'">Category Name :</label> <input
+							th:field="*{name}" type="text" class="form-control"
+							required="required" minlength="5" maxlength="120"
+							placeholder="Category Name" />
+					</div>
+					<div class="mb-3">
+						<label th:text="#{category.alias} + ':'">Alias :</label> <input
+							th:field="*{alias}" type="text" class="form-control"
+							required="required" minlength="5" maxlength="60"
+							placeholder="Alias" />
+					</div>
+					<div class="mb-3">
+						<label th:text="#{category.parent} + ':'">Parent Category
+							:</label> <select th:field="*{parent}" class="form-select">
+							<option value="0">[No Parent]</option>
+							<th:block th:each="category : ${listCategories}">
+								<option th:value="${category.id}">[[${category.name}]]</option>
+							</th:block>
+						</select>
+					</div>
+					<div class="mb-2 row">
+						<label class="mb-1" th:text="#{category.enabled} + ':'">Enabled
+							:</label>
+						<div class="col-sm-4">
+							<div class="form-check form-switch mb-3">
+								<input th:field="*{enabled}" class="form-check-input"
+									type="checkbox" />
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label th:text="#{category.image} + ':'">Image :</label> <input
+							type="hidden" th:field="*{image}" /> <input
+							th:required="${category.imagePath == null}" type="file"
+							id="fileImage" name="fileImage" accept="image/png, image/jpeg"
+							class="form-control" /> <img th:src="@{${category.imagePath}}"
+							id="thumbnail" alt="Image Preview"
+							class="img-fluid img-thumbnail" width="120"
+							style="margin-top: 1%;" />
+					</div>
+
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
+						<div class="d-flex align-items-start gap-3">
+							<input type="submit" th:value="#{button.update}"
+								class="btn btn-primary"></input> <input type="button"
+								th:value="#{button.cancel}"
+								class="btn btn-light-danger text-danger" id="buttonCancel"></input>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_category.js}"></script>
+
+<script type="text/javascript">
+	moduleURL = "[[@{/categories}]]";
+
+	function checkUniqueCategories(form) {
+		var url = "[[@{/categories/check_unique}]]";
+		var categoryId = $("#id").val();
+		var categoryName = $("#name").val();
+		var categoryAlias = $("#alias").val();
+		var csrfValue = $("input[name='_csrf']").val();
+		var params = {
+			id : categoryId,
+			name : categoryName,
+			alias : categoryAlias,
+			_csrf : csrfValue
+		};
+		var isResponseReceived = false; // Menandai apakah respons telah diterima
+		var requestTimeout = setTimeout(function() {
+			if (!isResponseReceived) {
+				// Jika respons belum diterima, tampilkan pesan timeout
+				Swal.fire({
+					icon : "error",
+					title : "Ups !",
+					text : "Request timed out.",
+					showCloseButton : true,
+				});
+			}
+		}, 7000); // Timeout dalam milidetik (7 detik)
+
+		$
+				.post(
+						url,
+						params,
+						function(response) {
+							isResponseReceived = true; // Tandai bahwa respons telah diterima
+							clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+							if (response == "OK") {
+								form.submit();
+							} else if (response == "DuplicateName") {
+								Swal
+										.fire({
+											icon : "info",
+											title : "Duplicate Name",
+											text : "There is another category having same name "
+													+ categoryName,
+											customClass : {
+												text : 'text-class'
+											},
+											showCloseButton : true,
+										});
+							} else if (response == "DuplicateAlias") {
+								Swal
+										.fire({
+											icon : "info",
+											title : "Duplicate Alias",
+											text : "There is another category having same alias "
+													+ categoryAlias,
+											customClass : {
+												text : 'text-class'
+											},
+											showCloseButton : true,
+										});
+							} else {
+								Swal.fire({
+									icon : "error",
+									title : response,
+									text : "Unknown response from server.",
+									showCloseButton : true,
+								});
+							}
+						})
+				.fail(
+						function(response) {
+							isResponseReceived = true; // Tandai bahwa respons telah diterima
+							clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+							Swal
+									.fire({
+										icon : "error",
+										title : "Ups !",
+										text : "An error occurred while connecting to the server.",
+										showCloseButton : true,
+									});
+						});
+		return false;
+	}
+</script>
+
+<style type="text/css">
+.title-class {
+	font-size: 17px !important;
+}
+</style>

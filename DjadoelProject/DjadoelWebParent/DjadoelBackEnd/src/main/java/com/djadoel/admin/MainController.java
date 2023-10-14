@@ -1,6 +1,7 @@
 package com.djadoel.admin;
 
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 /* 
@@ -14,7 +15,8 @@ public class MainController {
 
 	@GetMapping("/")
 	public String viewHomePage() {
-		return "dashboard";
+
+		return "layouts/dashboard";
 	}
 
 	@GetMapping("/login")

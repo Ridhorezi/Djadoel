@@ -1,34 +1,14 @@
 /*
 	Edit & Create js 
 */
-$(document)
-	.ready(
-		function() {
-			$('#buttonCancel').on("click", function() {
-				window.location = moduleURL;
-			});
 
-			$('#fileImage')
-				.change(
-					function() {
-						var fileInput = this;
-						var fileSize = fileInput.files[0].size;
-						var maxSize = 1048576; // 1MB
-
-						if (fileSize > maxSize) {
-							Swal
-								.fire({
-									icon: "info",
-									title: "Info !",
-									text: "File size is too large. You must choose an image less than 1MB!",
-									showCloseButton: true,
-								});
-							fileInput.value = ''; // clear file
-						} else {
-							showImageThumbnail(fileInput);
-						}
-					});
-		});
+function checkPasswordMatch(confirmPassword) {
+	if (confirmPassword.value != $("#password").val()) {
+		confirmPassword.setCustomValidity("Password do not match!");
+	} else {
+		confirmPassword.setCustomValidity("");
+	}
+}
 
 function showImageThumbnail(fileInput) {
 	var file = fileInput.files[0];
@@ -39,13 +19,26 @@ function showImageThumbnail(fileInput) {
 	reader.readAsDataURL(file);
 }
 
-function checkPasswordMatch(confirmPassword) {
-	if (confirmPassword.value != $("#password").val()) {
-		confirmPassword.setCustomValidity("Password do not match!");
-	} else {
-		confirmPassword.setCustomValidity("");
-	}
-}
+
+$(document).ready(function() {
+	$('#buttonCancel').on("click", function() {
+		window.location = moduleURL;
+	});
+
+	$('#fileImage').change(function() {
+		var fileInput = this;
+		var fileSize = fileInput.files[0].size;
+		var maxSize = 1048576; // 1MB
+
+		if (fileSize > maxSize) {
+			this.setCustomValidity("File size is too large. You must choose an image less than 1MB!")
+			this.reportValidity();
+		} else {
+			this.setCustomValidity("")
+			showImageThumbnail(fileInput);
+		}
+	});
+});
 
 
 /*
@@ -60,7 +53,7 @@ new DataTable('#datatable', {
 	columnDefs: [{
 		targets: [1, 6],
 		className: 'text-center'
-	}]
+	}],
 });
 
 const Toast = Swal.mixin({
@@ -76,19 +69,22 @@ const Toast = Swal.mixin({
 })
 
 
-$('.btn.btn-danger.btn-sm').click(function(e) {
-	e.preventDefault();
-	var deleteLink = $(this).attr('href');
-	Swal.fire({
-		title: 'Are you sure?',
-		text: "You won't be able to revert this!",
-		icon: 'warning',
-		showCancelButton: true,
-		confirmButtonText: 'Yes, delete it!'
-	}).then((result) => {
-		if (result.isConfirmed) {
-			window.location.href = deleteLink;
-		}
+$(document).ready(function() {
+	// Event delegation untuk tombol delete
+	$('#datatable').on('click', '.btn.btn-danger.btn-sm', function(e) {
+		e.preventDefault();
+		var deleteLink = $(this).attr('href');
+		Swal.fire({
+			title: 'Are you sure?',
+			text: "You won't be able to revert this!",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonText: 'Yes, delete it!'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				window.location.href = deleteLink;
+			}
+		});
 	});
 });
 

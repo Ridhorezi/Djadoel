@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
-	layout:decorate="~{fragments/main_layout}">
+	layout:decorate="~{layouts/main_layout}">
 <head>
-<title>Djadoel | Users</title>
+<title>Djadoel | [[#{user.title}]]</title>
 </head>
 
 <body>
@@ -11,72 +11,59 @@
 			<div class="card-body">
 				<ol class="breadcrumb mb-4">
 					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Users</li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{user.breadcrumb}]]</li>
 				</ol>
+
 				<div id="file_export_wrapper" class="dataTables_wrapper">
 					<div class="dt-buttons mb-3">
-						<a th:href="@{/users/create}"
-							class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-secondary mr-1"
-							tabindex="0" aria-controls="fil	e_export" title="Add"> <i
-							class="bi bi-plus"></i> <span>ADD</span>
-						</a> <a th:href="@{/users/export/csv}" id="csvButton"
-							class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-success mr-1"
-							tabindex="0" aria-controls="file_export"> <i
-							class="bi bi-filetype-csv"></i> <span>CSV</span>
-						</a> <a th:href="@{/users/export/excel}" id="excelButton"
-							class="dt-button btn-sm buttons-print btn btn-warning mr-1"
-							tabindex="0" aria-controls="file_export"> <i
-							class="bi bi-file-earmark-excel"></i> <span>EXCEL</span>
-						</a> <a th:href="@{/users/export/pdf}" id="pdfButton"
-							class="dt-button btn-sm buttons-print btn btn-danger mr-1"
-							tabindex="0" aria-controls="file_export"> <i
-							class="bi bi-file-pdf"></i> <span>PDF</span>
-						</a>
+						<div
+							th:replace="~{fragments/fragment :: buttonAdd('user', '/users/create')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportCsv('user', '/users/export/csv')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportExcel('user', '/users/export/excel')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportPdf('user', '/users/export/pdf')}"></div>
 					</div>
 				</div>
+
 				<div class="table-responsive">
 					<table id="datatable"
 						class="table dt-responsive table-hover nowrap w-100">
 						<thead>
 							<tr>
-								<th>User ID</th>
-								<th>Photos</th>
-								<th>Email</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Roles</th>
-								<th>Enabled</th>
-								<th>Action</th>
+								<th>[[#{user.id}]]</th>
+								<th>[[#{user.photos}]]</th>
+								<th>[[#{user.email}]]</th>
+								<th>[[#{user.firstname}]]</th>
+								<th>[[#{user.lastname}]]</th>
+								<th>[[#{user.roles}]]</th>
+								<th>[[#{user.enabled}]]</th>
+								<th>[[#{user.action}]]</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="user : ${listUsers}">
 								<td>[[${user.id}]]</td>
-								<td><img th:if="${user.photos != null}"
-									th:src="@{${user.photosImagePath}}"
-									class="img-fluid img-thumbnail" width="60" alt="Photos">
-									<img th:if="${user.photos == null}"
-									th:src="@{/images/default-user.png}"
-									class="img-fluid img-thumbnail" width="60" alt="Photos">
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: photos(${user.photos}, ${user.photosImagePath})}"></div>
 								</td>
 								<td>[[${user.email}]]</td>
 								<td>[[${user.firstName}]]</td>
 								<td>[[${user.lastName}]]</td>
 								<td>[[${user.roles}]]</td>
-								<td><a th:if="${user.enabled == true}"
-									th:href="@{'/users/' + ${user.id} + '/enabled/false'}"
-									class="bi bi-toggle-on" style="font-size: 25px;"
-									title="Disabled"> </a> <a th:if="${user.enabled == false}"
-									th:href="@{'/users/' + ${user.id} + '/enabled/true'}"
-									class="bi bi-toggle-off" style="font-size: 25px;"
-									title="Enabled"> </a></td>
-								<td><a th:href="@{'/users/edit/' + ${user.id}}"
-									class="btn btn-primary btn-sm" title='Edit'> <i
-										class="bi bi-pencil-square"></i> Edit
-								</a> <a th:href="@{'/users/delete/' + ${user.id}}" id="deleteButton"
-									class="btn btn-danger btn-sm" title='Delete'> <i
-										class="bi bi-trash"></i> Delete
-								</a></td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: toggleStatus(${user.enabled}, 'user', '/users/' + ${user.id})}"></div>
+								</td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: buttonEdit('user', '/users/edit/' + ${user.id})}"></div>
+									&nbsp;
+									<div
+										th:replace="~{fragments/fragment :: buttonDelete('user', '/users/delete/' + ${user.id}, true)}"></div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -94,13 +81,9 @@
 	$(document).ready(function() {
 
 		var addMessage = "[[${addMessage}]]";
-
 		var updateMessage = "[[${updateMessage}]]";
-
 		var deleteMessage = "[[${deleteMessage}]]";
-
 		var statusMessage = "[[${statusMessage}]]";
-
 		var infoMessage = "[[${infoMessage}]]";
 
 		if (addMessage === "success") {
@@ -112,7 +95,7 @@
 			Swal.fire({
 				icon : "error",
 				title : "Error !",
-				text : addMessage,
+				text : "Ups! something when wrong.",
 				showCloseButton : true,
 			});
 		} else if (updateMessage === "success") {
@@ -124,7 +107,7 @@
 			Swal.fire({
 				icon : "error",
 				title : "Error !",
-				text : updateMessage,
+				text : "Ups! something when wrong.",
 				showCloseButton : true,
 			});
 		} else if (deleteMessage === "success") {
