@@ -86,7 +86,15 @@ $('#csvButton').click(function(e) {
 		icon: 'question',
 		showCancelButton: true,
 		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel'
+		cancelButtonText: 'Cancel',
+		showLoaderOnConfirm: true,
+		preConfirm: () => {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve();
+				}, 2000);
+			});
+		}
 	}).then((result) => {
 		if (result.isConfirmed) {
 			window.location.href = exportLink;
@@ -103,7 +111,15 @@ $('#excelButton').click(function(e) {
 		icon: 'question',
 		showCancelButton: true,
 		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel'
+		cancelButtonText: 'Cancel',
+		showLoaderOnConfirm: true,
+		preConfirm: () => {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve();
+				}, 2000);
+			});
+		}
 	}).then((result) => {
 		if (result.isConfirmed) {
 			window.location.href = exportLink;
@@ -120,7 +136,15 @@ $('#pdfButton').click(function(e) {
 		icon: 'question',
 		showCancelButton: true,
 		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel'
+		cancelButtonText: 'Cancel',
+		showLoaderOnConfirm: true,
+		preConfirm: () => {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve();
+				}, 2000);
+			});
+		}
 	}).then((result) => {
 		if (result.isConfirmed) {
 			window.location.href = exportLink;
