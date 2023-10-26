@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
+
+	<!-- index -->
+
 	<!-- fragment add -->
 	<div th:fragment="buttonAdd(entityName, addURL)" th:remove="tag">
 		<a th:href="@{${addURL}}"
@@ -35,7 +38,7 @@
 	</div>
 
 	<!-- fragment pdf -->
-	<div th:fragment="buttonExportPdf( entityName, pdfURL)" th:remove="tag">
+	<div th:fragment="buttonExportPdf(entityName, pdfURL)" th:remove="tag">
 		<a th:href="@{${pdfURL}}" id="pdfButton"
 			class="dt-button btn-sm buttons-print btn btn-danger mr-1"
 			tabindex="0" aria-controls="file_export"
@@ -84,6 +87,7 @@
 	<!-- fragment delete -->
 	<div th:fragment="buttonDelete(entityName, deleteURL, visible)"
 		th:remove="tag">
+		&nbsp;
 		<th:block th:if="${visible}">
 			<a th:href="@{${deleteURL}}" id="deleteButton"
 				class="btn btn-danger btn-sm"
@@ -91,6 +95,114 @@
 				class="bi bi-trash"></i> [[#{button.delete}]]
 			</a>
 		</th:block>
+		<th:block th:unless="${visible}">
+			<a th:href="@{${deleteURL}}" id="deleteButton"
+				class="btn btn-light btn-sm disabled"
+				th:title="'Delete this ' + ${entityName}"> <i class="ti ti-ban"></i>
+				[[#{button.delete}]]
+			</a>
+		</th:block>
+	</div>
+
+	<!-- fragment search -->
+	<div th:fragment="searchFragment(linkUrl)">
+		<form th:action="@{${linkUrl}}">
+			<input type="hidden" name="sortField" th:value="${sortField}">
+			<input type="hidden" name="sortDir" th:value="${sortDir}">
+			<div class="input-group rounded">
+				<input type="search" name="keyword" th:value="${keyword}"
+					class="form-control rounded"
+					th:placeholder="#{button.search} + ' ...'" required="required" />
+				<input type="submit" th:value="#{button.search}"
+					class="btn btn-outline-primary btn-sm" style="margin-left: 2px;" /></input>
+				<input type="button" th:value="#{button.clear}"
+					class="btn btn-outline-primary btn-sm" onclick="clearFilter()" />
+			</div>
+		</form>
+	</div>
+
+	<!-- fragment th -->
+	<th th:fragment="thFragment(linkUrl, fieldName, columnLabel)"><a
+		style="color: #5A6A85;"
+		th:href="@{${linkUrl} + ${currentPage} + '?sortField=' + ${fieldName} + '&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">[[${columnLabel}]]</a>
+		<span th:if="${sortField == fieldName}"
+		th:class="${sortDir == 'asc' ? 'bi bi-caret-up-fill' : 'bi bi-caret-down-fill'}"
+		style="margin: 2%;"> </span></th>
+
+	<!-- fragment pagination link -->
+	<a th:fragment="pageLink(linkUrl, pageNum, label)" class="page-link"
+		th:href="@{${linkUrl} + '/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">[[${label}]]</a>
+
+
+	<!-- fragment pagination -->
+	<div th:fragment="pagination(linkUrl, entityName)" th:remove="tag">
+
+		<div class="text-center" th:unless="${totalItems > 0}">
+			<span class="mb-3 mb-md-0">[[#{user.no}]] [[${entityName}]]
+				[[#{user.found}]]</span>
+		</div>
+
+		<div
+			class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+
+			<div th:if="${totalItems > 0}">
+				<span class="mb-3 mb-md-0">[[#{pagination.showing}]]
+					[[${entityName}]] [[${startCount}]] [[#{pagination.to}]]
+					[[${endCount}]] [[#{pagination.of}]] [[${totalItems}]]
+					[[#{pagination.entries}]]</span>
+			</div>
+
+			<div th:if="${totalPages > 1}">
+				<nav>
+					<ul class="pagination pagination-sm justify-content-center mt-3 ">
+						<li
+							th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+							<a
+							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, 1, #{pagination.first})}"></a>
+						</li>
+
+						<li
+							th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
+							<a
+							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, ${currentPage - 1}, #{pagination.previous})}"></a>
+						</li>
+
+						<li
+							th:each="i : ${#numbers.sequence(currentPage, currentPage + 9)}"
+							th:if="${i <= totalPages}"
+							th:class="${i == currentPage ? 'page-item active' : 'page-item'}">
+							<a
+							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, ${i}, ${i})}"></a>
+						</li>
+
+						<li
+							th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}"><a
+							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, ${currentPage + 1}, #{pagination.next})}"></a></li>
+
+						<li
+							th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}"><a
+							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, ${totalPages}, #{pagination.last})}"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- form create & edit -->
+
+	<div th:fragment="buttonSave(label)" th:remove="tag">
+		<input type="submit" th:value="@{${label}}" class="btn btn-primary"></input>
+	</div>
+
+	<div th:fragment="buttonUpdate(label)" th:remove="tag">
+		<input type="button" th:value="@{${label}}"
+			class="btn btn-light-danger text-danger" id="buttonCancel"></input>
+	</div>
+
+	<div th:fragment="buttonCancel(label)" th:remove="tag">
+		<input type="button" th:value="@{${label}}"
+			class="btn btn-light-danger text-danger" id="buttonCancel"></input>
 	</div>
 
 </body>

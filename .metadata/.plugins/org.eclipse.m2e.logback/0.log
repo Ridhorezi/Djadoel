@@ -18835,3 +18835,420 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.po
 2023-10-14 12:15:24,508 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-10-14 12:15:24,508 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-10-14 12:15:24,510 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:19:22,664 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-10-14 17:19:24,271 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sonarLintSpringAppConfig' of type [org.sonarsource.sonarlint.core.spring.SonarLintSpringAppConfig$$EnhancerBySpringCGLIB$$c15ee191] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-14 17:19:24,352 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'provideClientEventBus' of type [com.google.common.eventbus.AsyncEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-14 17:30:44,332 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-10-14 17:30:44,742 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-10-14 17:30:45,485 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-10-14 17:30:45,489 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-10-14 17:30:48,325 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:30:48,435 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 665 resources from src\main\resources to target\classes
+2023-10-14 17:30:53,505 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:31:08,090 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:31:08,744 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-10-14 17:31:08,746 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier  to /DjadoelCommon/target/classes
+2023-10-14 17:31:09,063 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:31:09,713 [Worker-12: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:31:16,806 [Worker-0: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:31:17,277 [Worker-0: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:31:17,818 [Worker-0: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 17:37:35,225 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:37:35,229 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:37:35,248 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:42:52,707 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:42:52,707 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:42:52,712 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:43:43,642 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:43:43,642 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:43:43,646 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:45:42,695 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:45:42,695 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:45:42,699 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:46:00,414 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:46:00,415 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:46:00,419 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:46:36,945 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:46:36,946 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:46:36,950 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:47:05,216 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:47:05,216 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:47:05,225 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:49:23,584 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:49:23,585 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:49:23,591 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:49:42,067 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:49:42,068 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:49:42,071 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:49:53,996 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:49:53,996 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:49:54,000 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:50:05,343 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:50:05,343 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:50:05,347 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:50:14,915 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:50:14,915 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:50:14,919 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:51:12,495 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:51:12,495 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:51:12,498 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:51:46,523 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:51:46,523 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:51:46,526 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:52:54,029 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:52:54,029 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:52:54,034 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:53:16,659 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:53:16,660 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:53:16,663 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:54:27,427 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:54:27,427 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:54:27,430 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:55:11,142 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:55:11,143 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:55:11,146 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:55:27,830 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:55:27,831 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:55:27,834 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:55:35,906 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:55:35,906 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:55:35,909 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:55:40,467 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:55:40,467 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:55:40,470 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:56:46,714 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:56:46,714 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:56:46,753 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:56:54,982 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:56:54,982 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:56:54,986 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:57:02,155 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:57:02,155 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:57:02,159 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:57:40,291 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:57:40,292 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:57:40,294 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:59:11,012 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:59:11,012 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:59:11,015 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:59:34,978 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:59:34,978 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:59:34,981 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 17:59:51,503 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 17:59:51,503 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 17:59:51,507 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:00:03,964 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:00:03,964 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:00:03,967 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:04:32,669 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:04:32,670 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:04:32,675 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:04:58,689 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:04:58,689 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:04:58,692 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:10:45,152 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:10:45,158 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:10:45,170 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:17:09,763 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:17:09,767 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:17:09,776 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:17:24,565 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:17:24,565 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:17:24,576 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:18:23,686 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:18:23,687 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:18:23,691 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:18:57,174 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:18:57,174 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:18:57,178 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:20:27,878 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:20:27,878 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:20:27,882 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:20:34,088 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:20:34,089 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:20:34,092 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:21:05,080 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:21:05,080 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:21:05,085 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:21:09,085 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:21:09,085 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:21:09,091 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:21:14,090 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:21:14,090 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:21:14,094 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:21:34,613 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:21:34,614 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:21:34,617 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:22:23,326 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:22:23,327 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:22:23,330 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:24:21,519 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:24:21,519 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:24:21,522 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:24:54,367 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:24:54,367 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:24:54,371 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:26:56,726 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:26:56,727 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:26:56,730 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:27:10,685 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:27:10,686 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:27:10,690 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:27:24,198 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:27:24,199 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:27:24,204 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:27:39,391 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:27:39,391 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:27:39,395 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:27:53,835 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:27:53,835 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:27:53,837 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:28:53,329 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:28:53,329 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:28:53,332 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:31:20,276 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:31:20,279 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:31:20,285 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:31:25,126 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:31:25,126 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:31:25,128 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:31:33,455 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:31:33,455 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:31:33,458 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:31:45,316 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:31:45,316 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:31:45,318 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:32:03,476 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:32:03,477 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:32:03,489 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:32:19,197 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:32:19,198 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:32:19,202 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:32:29,688 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:32:29,689 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:32:29,695 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:32:37,978 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:32:37,978 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:32:37,982 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:32:48,953 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:32:48,954 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:32:48,957 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:33:00,444 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:33:00,444 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:33:00,449 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:33:07,995 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:33:07,995 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:33:07,997 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:33:45,027 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:33:45,028 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:33:45,032 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:34:18,637 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:34:18,637 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:34:18,639 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:36:00,678 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:36:00,680 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:36:00,685 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:36:06,717 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:36:06,717 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:36:06,720 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:36:10,231 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:36:10,232 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:36:10,235 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:36:24,007 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:36:24,007 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:36:24,010 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:37:11,641 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:37:11,641 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:37:11,644 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:37:38,069 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:37:38,071 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:37:38,077 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:38:10,200 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:38:10,200 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:38:10,203 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:38:19,862 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:38:19,863 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:38:19,867 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:38:27,814 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:38:27,814 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:38:27,817 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:38:46,269 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:38:46,269 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:38:46,274 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:38:50,277 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:38:50,277 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:38:50,279 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:41:31,425 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:41:31,429 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:41:31,433 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:41:43,512 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:41:43,512 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:41:43,516 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:43:10,820 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:43:10,820 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:43:10,825 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 18:46:10,930 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 18:46:10,931 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 18:46:10,934 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:55:49,497 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:55:49,503 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:55:49,510 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:56:07,436 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:56:07,437 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:56:07,443 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:56:11,392 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:56:11,393 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:56:11,399 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:56:16,949 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:56:16,950 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:56:16,954 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:56:43,959 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:56:43,959 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:56:43,963 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:57:30,209 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:57:30,209 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:57:30,218 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:57:33,739 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:57:33,739 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:57:33,742 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:57:37,861 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:57:37,862 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:57:37,869 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 19:57:42,959 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 19:57:42,959 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 19:57:42,962 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:06:49,371 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:06:49,534 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:06:49,539 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelCommon\src\test\resources
+2023-10-14 20:08:20,154 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:08:20,236 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:08:20,238 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelCommon\src\test\resources
+2023-10-14 20:19:07,103 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:19:07,855 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 665 resources from src\main\resources to target\classes
+2023-10-14 20:19:08,099 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:27:04,610 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:27:04,611 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:27:04,617 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:28:09,289 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:28:09,289 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:28:09,297 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:29:00,894 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:29:00,896 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:29:00,905 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:29:56,249 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:29:56,249 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:29:56,260 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:33:23,727 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:33:23,737 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:33:23,743 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:33:55,531 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:33:55,531 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:33:55,539 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:35:31,737 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:35:31,739 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:35:31,745 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:36:37,413 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:36:37,413 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:36:37,418 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:37:37,632 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:37:37,633 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:37:37,640 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:39:53,365 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:39:53,368 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:39:53,373 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:40:08,716 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:40:08,717 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:40:08,722 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:40:18,197 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:40:18,198 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:40:18,205 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:42:40,550 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:42:40,553 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:42:40,555 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:44:56,043 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:44:56,044 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:44:56,050 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:45:03,088 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:45:03,088 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:45:03,091 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:45:55,848 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:45:55,849 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:45:55,856 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:46:18,749 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:46:18,750 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:46:18,753 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:46:24,597 [Worker-89: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 20:46:24,705 [Worker-89: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 20:46:24,844 [Worker-89: Launching DjadoelBackEnd - DjadoelBackEndApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DjadoelCommon: com.djadoel:DjadoelCommon:0.0.1-SNAPSHOT with classifier null to /DjadoelCommon/target/classes
+2023-10-14 20:50:15,984 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:50:15,989 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:50:15,993 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:51:38,488 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:51:38,489 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:51:38,494 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:52:23,636 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:52:23,638 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:52:23,645 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:52:41,067 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:52:41,067 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:52:41,071 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 20:53:15,474 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 20:53:15,476 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 20:53:15,482 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:04:47,418 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:04:48,094 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 665 resources from src\main\resources to target\classes
+2023-10-14 21:04:48,344 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:06:01,900 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:06:02,350 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 665 resources from src\main\resources to target\classes
+2023-10-14 21:06:02,833 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:06:34,411 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:06:34,457 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 665 resources from src\main\resources to target\classes
+2023-10-14 21:06:34,527 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:10:06,728 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:10:06,736 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:10:06,745 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:10:37,356 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:10:37,356 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:10:37,360 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:13:02,706 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:13:02,707 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:13:02,712 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:13:15,040 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:13:15,041 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:13:15,047 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:17:40,854 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:17:40,860 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:17:40,868 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:18:08,082 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:18:08,085 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:18:08,090 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:18:48,955 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:18:48,959 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:18:48,973 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:19:07,643 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:19:07,644 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:19:07,652 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:41:50,405 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:41:50,413 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:41:50,422 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:42:22,641 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:42:22,649 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:42:22,663 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:42:46,908 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:42:46,908 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:42:46,914 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:43:04,377 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:43:04,378 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:43:04,382 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:45:29,448 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:45:29,450 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:45:29,454 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:46:23,458 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:46:23,459 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:46:23,463 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:46:53,445 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:46:53,447 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:46:53,452 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources
+2023-10-14 21:47:19,091 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-14 21:47:19,094 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-14 21:47:19,103 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\project-java-spring\DjadoelEcommerce\DjadoelProject\DjadoelWebParent\DjadoelBackEnd\src\test\resources

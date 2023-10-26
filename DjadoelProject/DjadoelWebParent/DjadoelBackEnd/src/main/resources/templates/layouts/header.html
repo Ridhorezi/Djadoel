@@ -26,7 +26,11 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link nav-icon-hover" href="javascript:void(0)"
 					id="drop2" data-bs-toggle="dropdown" aria-expanded="false"> <img
-						th:src="@{/images/profile/user-1.jpg}" alt="Profile User"
+						th:if="${#authentication.principal.thumbnail != null}"
+						th:src="@{${#authentication.principal.thumbnail}}"
+						alt="Profile User" width="35" height="35" class="rounded-circle">
+						<img th:unless="${#authentication.principal.thumbnail != null}"
+						th:src="@{/images/profile/user-1.jpg}" alt="Default User"
 						width="35" height="35" class="rounded-circle">
 				</a>
 					<div
@@ -46,20 +50,20 @@
 					class="nav-link nav-icon-hover" href="javascript:void(0)"
 					id="drop1" data-bs-toggle="dropdown" aria-expanded="false"> <img
 						th:src="@{/images/icon-flag-lang.svg}" alt="" width="25"
-						height="30" cl25s="rounded-circle">
+						height="25" cl25s="rounded-circle">
 				</a>
 					<div
 						class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
 						aria-labelledby="drop1">
 						<div class="message-body">
-							<a th:href="@{?lang=id}"
+							<a th:href="@{/?lang=id}"
 								class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
 								<div class="position-relative">
 									<img th:src="@{/images/icon-flag-id.png}" style="width: 100px;"
 										alt="" class="rounded-circle object-fit-cover round-20">
 								</div>
 								<p class="mb-0 fs-3">Indonesia</p>
-							</a> <a th:href="@{?lang=en}"
+							</a> <a th:href="@{/?lang=en}"
 								class="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
 								<div class="position-relative">
 									<img th:src="@{/images/icon-flag-en.svg}" alt=""

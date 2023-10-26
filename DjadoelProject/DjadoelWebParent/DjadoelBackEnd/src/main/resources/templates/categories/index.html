@@ -2,7 +2,7 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
 	layout:decorate="~{layouts/main_layout}">
 <head>
-<title>Djadoel | [[#{category.title}]]</title>
+<title>[[#{djadoel.title}]] | [[#{category.title}]]</title>
 </head>
 
 <body>
@@ -27,17 +27,25 @@
 					</div>
 				</div>
 
-				<div class="table-responsive">
-					<table id="datatable"
-						class="table dt-responsive table-hover nowrap w-100">
+				<div id="datatable" class="table-responsive text-nowrap">
+
+					<div
+						th:replace="~{fragments/fragment :: searchFragment('/categories/page/1')}"></div>
+
+					<table class="table dt-responsive table-hover nowrap w-100">
 						<thead>
 							<tr>
-								<th>[[#{category.id}]]</th>
-								<th>[[#{category.image}]]</th>
-								<th>[[#{category.name}]]</th>
-								<th>[[#{category.alias}]]</th>
-								<th>[[#{category.enabled}]]</th>
-								<th>[[#{category.action}]]</th>
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/categories/page/', 'id', #{category.id})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/categories/page/', 'image', #{category.image})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/categories/page/', 'name', #{category.name})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/categories/page/', 'alias', #{category.alias})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/categories/page/', 'enabled', #{category.enabled})}">
+								<th style="width: 17%;">[[#{category.action}]]</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -64,6 +72,17 @@
 							</tr>
 						</tbody>
 					</table>
+
+					<div th:if="${keyword != null}" class="text-center">
+						<span>[[#{category.hierarchical}]]</span>
+						<div
+							th:replace="~{fragments/fragment :: pagination('/categories', #{category.categories})}"></div>
+					</div>
+					<div th:unless="${keyword != null}">
+						<div
+							th:replace="~{fragments/fragment :: pagination('/categories', #{category.topcategories})}"></div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -75,6 +94,10 @@
 <script th:src="@{/js/common_category.js}"></script>
 
 <script type="text/javascript">
+	function clearFilter() {
+		window.location = "[[@{/categories}]]"
+	}
+
 	$(document).ready(function() {
 
 		var addMessage = "[[${addMessage}]]";

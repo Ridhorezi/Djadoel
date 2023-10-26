@@ -2,7 +2,7 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
 	layout:decorate="~{layouts/main_layout}">
 <head>
-<title>Djadoel | [[#{user.title}]]</title>
+<title>[[#{djadoel.title}]] | [[#{user.title}]]</title>
 </head>
 
 <body>
@@ -27,19 +27,29 @@
 					</div>
 				</div>
 
-				<div class="table-responsive">
-					<table id="datatable"
-						class="table dt-responsive table-hover nowrap w-100">
+				<div id="datatable" class="table-responsive text-nowrap">
+
+					<div
+						th:replace="~{fragments/fragment :: searchFragment('/users/page/1')}"></div>
+
+					<table class="table table-hover nowrap w-100">
 						<thead>
 							<tr>
-								<th>[[#{user.id}]]</th>
-								<th>[[#{user.photos}]]</th>
-								<th>[[#{user.email}]]</th>
-								<th>[[#{user.firstname}]]</th>
-								<th>[[#{user.lastname}]]</th>
-								<th>[[#{user.roles}]]</th>
-								<th>[[#{user.enabled}]]</th>
-								<th>[[#{user.action}]]</th>
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'id', #{user.id})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'photos', #{user.photos})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'email', #{user.email})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'firstName', #{user.firstname})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'lastName', #{user.lastname})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'roles', #{user.roles})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/users/page/', 'enabled', #{user.enabled})}">
+								<th style="width: 17%;">[[#{user.action}]]</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -67,6 +77,8 @@
 							</tr>
 						</tbody>
 					</table>
+					<div
+						th:replace="~{fragments/fragment :: pagination('/users', #{user.users})}"></div>
 				</div>
 			</div>
 		</div>
@@ -78,6 +90,10 @@
 <script th:src="@{/js/common_users.js}"></script>
 
 <script type="text/javascript">
+	function clearFilter() {
+		window.location = "[[@{/users}]]"
+	}
+
 	$(document).ready(function() {
 
 		var addMessage = "[[${addMessage}]]";
