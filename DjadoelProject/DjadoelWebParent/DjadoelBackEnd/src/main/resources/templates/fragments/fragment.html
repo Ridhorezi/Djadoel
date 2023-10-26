@@ -168,10 +168,9 @@
 						</li>
 
 						<li
-							th:each="i : ${#numbers.sequence(currentPage, currentPage + 9)}"
-							th:if="${i <= totalPages}"
-							th:class="${i == currentPage ? 'page-item active' : 'page-item'}">
-							<a
+							th:class="${i == currentPage ? 'page-item active' : 'page-item'}"
+							th:each="i : ${#numbers.sequence(currentPage - 9, currentPage + 9)}"
+							th:if="${i >= 1 && i <= totalPages}"><a
 							th:replace="~{fragments/fragment :: pageLink(${linkUrl}, ${i}, ${i})}"></a>
 						</li>
 

@@ -67,7 +67,7 @@ public class UserController {
 		model.addAttribute("currentPage", pageNum);
 
 		model.addAttribute("totalPages", page.getTotalPages());
-		
+
 		model.addAttribute("totalItems", page.getTotalElements());
 
 		model.addAttribute("startCount", startCount);
