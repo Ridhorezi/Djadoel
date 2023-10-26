@@ -38,12 +38,12 @@ $(document).ready(function() {
 	Index js
 */
 
-new DataTable('#datatable', {
+/*new DataTable('#datatable', {
 	responsive: true,
 	rowReorder: {
 		selector: 'td:nth-child(2)'
 	},
-});
+});*/
 
 const Toast = Swal.mixin({
 	toast: true,
@@ -127,4 +127,20 @@ $('#pdfButton').click(function(e) {
 			window.location.href = exportLink;
 		}
 	});
+});
+
+// get current URL
+var currentUrl = window.location.pathname;
+
+// Find all link with class "sidebar-link"
+var sidebarLinks = $('a.sidebar-link');
+
+// Loop through the links
+sidebarLinks.each(function() {
+	var linkHref = $(this).attr('href');
+
+	/* Check if the current URL matches or starts with the link's href */
+	if (currentUrl === linkHref || currentUrl.startsWith(linkHref + '/')) {
+		$(this).addClass('active');
+	}
 });

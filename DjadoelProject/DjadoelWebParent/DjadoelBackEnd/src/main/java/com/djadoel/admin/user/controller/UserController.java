@@ -13,6 +13,8 @@ import com.djadoel.common.entity.Role;
 import com.djadoel.common.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -39,7 +41,47 @@ public class UserController {
 
 	@GetMapping("/users")
 	public String index(Model model) {
-		List<User> listUsers = service.listAll();
+
+		return listByPage(1, model, "id", "asc", null);
+	}
+
+	@GetMapping("users/page/{pageNum}")
+	public String listByPage(@PathVariable(name = "pageNum") int pageNum, Model model,
+			@Param("sortField") String sortField, @Param("sortDir") String sortDir, @Param("keyword") String keyword) {
+
+		Page<User> page = service.listByPage(pageNum, sortField, sortDir, keyword);
+
+		List<User> listUsers = page.getContent();
+
+		long startCount = (pageNum - 1) * UserService.USERS_PER_PAGE + 1;
+
+		long endCount = startCount + UserService.USERS_PER_PAGE - 1;
+
+		if (endCount > page.getTotalElements()) {
+
+			endCount = page.getTotalElements();
+		}
+
+		String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
+
+		model.addAttribute("currentPage", pageNum);
+
+		model.addAttribute("totalPages", page.getTotalPages());
+		
+		model.addAttribute("totalItems", page.getTotalElements());
+
+		model.addAttribute("startCount", startCount);
+
+		model.addAttribute("endCount", endCount);
+
+		model.addAttribute("sortField", sortField);
+
+		model.addAttribute("sortDir", sortDir);
+
+		model.addAttribute("reverseSortDir", reverseSortDir);
+
+		model.addAttribute("keyword", keyword);
+
 		model.addAttribute("listUsers", listUsers);
 
 		return "users/index";
@@ -73,6 +115,12 @@ public class UserController {
 		}
 	}
 
+	private String getRedirectURLtoAffectedUser(User user) {
+		String firstPartOfEmail = user.getEmail().split("@")[0];
+
+		return "redirect:/users/page/1?sortField=id&sortDir=asc&keyword=" + firstPartOfEmail;
+	}
+
 	@PostMapping("/users/save")
 	public String insert(User user, RedirectAttributes redirectAttributes,
 			@RequestParam("image") MultipartFile multipartFile) {
@@ -98,7 +146,7 @@ public class UserController {
 			}
 		}
 
-		return "redirect:/users";
+		return getRedirectURLtoAffectedUser(user);
 	}
 
 	@PostMapping("/users/update")
@@ -136,7 +184,7 @@ public class UserController {
 
 		}
 
-		return "redirect:/users";
+		return getRedirectURLtoAffectedUser(user);
 	}
 
 	@GetMapping("/users/{id}/enabled/{status}")

@@ -81,5 +81,17 @@ public class DjadoelUserDetails implements UserDetails {
 	public void setLastName(String lastName) {
 		this.user.setLastName(lastName);
 	}
+	
+	public void setPhotos(String photos) {
+		this.user.setPhotos(photos);
+	}
+	
+	public Integer getId() {
+		return user.getId();
+	}
+	
+	public String getThumbnail() {
+        return this.user.getPhotosImagePath();
+    }
 
 }
