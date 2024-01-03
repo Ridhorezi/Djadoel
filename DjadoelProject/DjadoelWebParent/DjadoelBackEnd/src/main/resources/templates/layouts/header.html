@@ -29,9 +29,9 @@
 						th:if="${#authentication.principal.thumbnail != null}"
 						th:src="@{${#authentication.principal.thumbnail}}"
 						alt="Profile User" width="35" height="35" class="rounded-circle">
-						<img th:unless="${#authentication.principal.thumbnail != null}"
-						th:src="@{/images/profile/user-1.jpg}" alt="Default User"
-						width="35" height="35" class="rounded-circle">
+						<img th:if="${#authentication.principal.thumbnail == null}"
+						src="@{/images/default-user.png}" alt="Default User" width="35"
+						height="35" class="rounded-circle">
 				</a>
 					<div
 						class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
