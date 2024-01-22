@@ -43,3 +43,17 @@ y
 Isrc/main/java/com/djadoel/admin/brand/controller/BrandRestController.java,3\f\3f0e541a1e8aa1b36d5602ef581c0bf8f99bed90
 r
 Bsrc/main/java/com/djadoel/admin/brand/export/AbstractExporter.java,d\c\dcff5d2a63038864dc33c82e7ea931faca7161a7
+m
+=src/main/java/com/djadoel/admin/category/CategoryService.java,9\b\9b161a8d691a87abbb8a93a2b61d4829c8084a09
+p
+@src/main/java/com/djadoel/admin/category/CategoryRepository.java,6\2\626ea22693ee965f6e15cf8a74e05f0abf5fff84
+r
+Bsrc/test/java/com/djadoel/admin/category/CategoryServiceTests.java,b\9\b9e67bf2ea4530bd3527ebae2d9efa80347317cb
+u
+Esrc/test/java/com/djadoel/admin/category/CategoryRepositoryTests.java,8\b\8babd196211649435efe419123b8d18a96d51251
+{
+Ksrc/main/java/com/djadoel/admin/category/controller/CategoryController.java,9\e\9ee23ee64ffb782235e2c25db561a7941c8455c2
+e
+5src/main/java/com/djadoel/admin/user/UserService.java,3\2\32de88491c8fe117d4ef751dfbc2820806bb955e
+h
+8src/main/java/com/djadoel/admin/user/RoleRepository.java,2\b\2b9548d851efa7592cd0ee7e5b212dab92962d7e
