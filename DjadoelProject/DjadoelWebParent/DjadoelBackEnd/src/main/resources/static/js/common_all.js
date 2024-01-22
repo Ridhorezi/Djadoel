@@ -1,5 +1,12 @@
 $(document).ready(function() {
-	$("#logoutLink").on("click", function(e) {
+	$("#logoutLinkHeader").on("click", function(e) {
+		e.preventDefault();
+		document.logoutForm.submit();
+	});
+});
+
+$(document).ready(function() {
+	$("#logoutLinkSidebar").on("click", function(e) {
 		e.preventDefault();
 		document.logoutForm.submit();
 	});

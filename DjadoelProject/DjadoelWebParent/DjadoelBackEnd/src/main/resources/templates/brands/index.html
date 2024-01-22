@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{layouts/main_layout}">
+<head>
+<title>[[#{djadoel.title}]] | [[#{brand.title}]]</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{brand.breadcrumb}]]</li>
+				</ol>
+
+				<div id="file_export_wrapper" class="dataTables_wrapper">
+					<div class="dt-buttons mb-3">
+						<div
+							th:replace="~{fragments/fragment :: buttonAdd('brand', '/brands/create')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportCsv('brand', '/brands/export/csv')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportExcel('brand', '/brands/export/excel')}"></div>
+						<div
+							th:replace="~{fragments/fragment :: buttonExportPdf('brand', '/brands/export/pdf')}"></div>
+					</div>
+				</div>
+
+				<div id="datatable" class="table-responsive text-nowrap">
+
+					<div
+						th:replace="~{fragments/fragment :: searchFragment('/brands/page/1')}"></div>
+
+					<table class="table table-hover nowrap w-100">
+						<thead>
+							<tr>
+								<th>[[#{brand.id}]]</th>
+								<th>[[#{brand.logo}]]</th>
+								<th>[[#{brand.name}]]</th>
+								<th>[[#{brand.categories}]]</th>
+								<th style="width: 17%;">[[#{user.action}]]</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="brand : ${listBrands}">
+								<td>[[${brand.id}]]</td>
+								<td></td>
+								<td>[[${brand.name}]]</td>
+								<td>
+									<th:block th:each="cat : ${brand.categories}">
+										<span class="badge bg-primary-subtle text-primary rounded-3 fw-semibold fs-2 m-1" th:text="${cat.name}"></span>
+									</th:block>
+								</td>
+								<td>
+									<div
+										th:replace="~{fragments/fragment :: buttonEdit('brand', '/brands/edit/' + ${brand.id})}"></div>
+									&nbsp;
+									<div
+										th:replace="~{fragments/fragment :: buttonDelete('brand', '/brands/delete/' + ${brand.id}, true)}"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_brands.js}"></script>
+
+<script type="text/javascript">
+	function clearFilter() {
+		window.location = "[[@{/brands}]]"
+	}
+
+	$(document).ready(function() {
+
+		var addMessage = "[[${addMessage}]]";
+		var updateMessage = "[[${updateMessage}]]";
+		var deleteMessage = "[[${deleteMessage}]]";
+		var statusMessage = "[[${statusMessage}]]";
+		var infoMessage = "[[${infoMessage}]]";
+
+		if (addMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The user has been successfully saved",
+			});
+		} else if (addMessage === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error !",
+				text : "Ups! something when wrong.",
+				showCloseButton : true,
+			});
+		} else if (updateMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The user has been successfully updated",
+			});
+		} else if (updateMessage === "error") {
+			Swal.fire({
+				icon : "error",
+				title : "Error !",
+				text : "Ups! something when wrong.",
+				showCloseButton : true,
+			});
+		} else if (deleteMessage === "success") {
+			Toast.fire({
+				icon : "success",
+				text : "The user has been successfully deleted",
+			});
+		} else if (statusMessage && statusMessage !== "undefined") {
+			Toast.fire({
+				icon : "success",
+				text : statusMessage,
+			});
+		} else if (infoMessage && infoMessage !== "undefined") {
+			Swal.fire({
+				icon : "info",
+				title : "Info !",
+				text : infoMessage,
+				showCloseButton : true,
+			});
+		}
+	});
+</script>
