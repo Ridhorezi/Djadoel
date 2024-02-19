@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{layouts/main_layout}">
+<head>
+<title>[[#{djadoel.title}]] | [[#{brand.title}]] |
+	[[#{brand.titlecreate}]]</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a
+						th:href="@{/brands}">[[#{brand.title}]]</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{brand.titlecreate}]]</li>
+				</ol>
+				<form th:action="@{/brands/save}" th:object="${brand}" method="post"
+					class="form-horizontal" enctype="multipart/form-data"
+					onsubmit="return checkUnique(this)">
+					<div class="mb-3">
+						<label th:text="#{brand.name} + ':'">Brand Name :</label> <input
+							th:field="*{name}" type="text" class="form-control"
+							required="required" minlength="5" maxlength="120"
+							placeholder="Brand Name" />
+					</div>
+					<div class="mb-3">
+						<label th:text="#{brand.categories} + ':'"> Categories :</label> <select
+							th:field="*{categories}" class="form-select" size="8"
+							multiple="multiple" required="required"
+							style="font-size: 15.5px;">
+							<th:block th:each="category : ${listCategories}">
+								<option th:value="${category.id}">[[${category.name}]]</option>
+							</th:block>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label th:text="#{brand.chosen} + ':'">Chosen Categories:</label>
+						<div class="mb-3" id="chosen"></div>
+					</div>
+					<div class="mb-3">
+						<label th:text="#{brand.logo} + ':'">Brand Logo :</label> <input
+							type="hidden" th:field="*{logo}" /> <input type="file"
+							id="fileImage" name="fileImage" accept="image/png, image/jpeg"
+							class="form-control" required="required"> <img
+							th:src="@{${brand.logoPath}}" id="thumbnail" alt="Image Preview"
+							class="img-fluid img-thumbnail" width="120"
+							style="margin-top: 1%;">
+					</div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
+						<div class="d-flex align-items-start gap-3">
+							<div
+								th:replace="~{fragments/fragment :: buttonSave(#{button.save})}"></div>
+
+							<div
+								th:replace="~{fragments/fragment :: buttonCancel(#{button.cancel})}"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_brands.js}"></script>
+
+<script type="text/javascript">
+	moduleURL = "[[@{/brands}]]";
+
+	function checkUnique(form) {
+
+		// Check Unique 
+		var url = "[[@{/brands/check_unique}]]";
+		var brandId = $("#id").val();
+		var brandName = $("#name").val();
+		var csrfValue = $("input[name='_csrf']").val();
+		var params = {
+			id : brandId,
+			name : brandName,
+			_csrf : csrfValue
+		};
+
+		var isResponseReceived = false; // Menandai apakah respons telah diterima
+
+		var requestTimeout = setTimeout(function() {
+			if (!isResponseReceived) {
+				// Jika respons belum diterima, tampilkan pesan timeout
+				Swal.fire({
+					icon : "error",
+					title : "Ups !",
+					text : "Request timed out.",
+					showCloseButton : true,
+				});
+			}
+		}, 7000); // Timeout dalam milidetik (7 detik)
+
+		$.post(
+				url,
+				params,
+				function(response) {
+					console.log(response);
+					isResponseReceived = true; // Tandai bahwa respons telah diterima
+					clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+					if (response == "OK") {
+						form.submit();
+					} else if (response == "Duplicate") {
+						Swal.fire({
+							icon : "info",
+							title : "Duplicate",
+							text : "There is another brand having same name "
+									+ brandName,
+							customClass : {
+								text : 'text-class'
+							},
+							showCloseButton : true,
+						});
+					} else {
+						Swal.fire({
+							icon : "error",
+							title : response,
+							text : "Unknown response from server.",
+							showCloseButton : true,
+						});
+					}
+				}).fail(function(response) {
+			isResponseReceived = true; // Tandai bahwa respons telah diterima
+			clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+			Swal.fire({
+				icon : "error",
+				title : "Ups !",
+				text : "An error occurred while connecting to the server.",
+				showCloseButton : true,
+			});
+		});
+
+		return false;
+	}
+</script>
+
+<style type="text/css">
+.title-class {
+	font-size: 17px !important;
+}
+</style>

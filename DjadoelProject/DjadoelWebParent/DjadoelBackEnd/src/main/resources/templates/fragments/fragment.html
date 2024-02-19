@@ -21,7 +21,7 @@
 		<a th:href="@{${csvURL}}" id="csvButton"
 			class="dt-button btn-sm buttons-pdf buttons-html5 btn btn-success mr-1"
 			tabindex="0" aria-controls="file_export"
-			th:title="'Export this ' + ${entityName}"> <i
+			th:title="'Export this ' + ${entityName}" data-type="csv"> <i
 			class="bi bi-filetype-csv"></i> <span>[[#{button.csv}]]</span>
 		</a>
 	</div>
@@ -32,17 +32,17 @@
 		<a th:href="@{${excelURL}}" id="excelButton"
 			class="dt-button btn-sm buttons-print btn btn-warning mr-1"
 			tabindex="0" aria-controls="file_export"
-			th:title="'Export this ' + ${entityName}"> <i
+			th:title="'Export this ' + ${entityName}" data-type="xlsx"> <i
 			class="bi bi-file-earmark-excel"></i> <span>[[#{button.excel}]]</span>
 		</a>
 	</div>
-
+	
 	<!-- fragment pdf -->
 	<div th:fragment="buttonExportPdf(entityName, pdfURL)" th:remove="tag">
 		<a th:href="@{${pdfURL}}" id="pdfButton"
 			class="dt-button btn-sm buttons-print btn btn-danger mr-1"
 			tabindex="0" aria-controls="file_export"
-			th:title="'Export this ' + ${entityName}"> <i
+			th:title="'Export this ' + ${entityName}" data-type="pdf"> <i
 			class="bi bi-file-pdf"></i> <span>[[#{button.pdf}]]</span>
 		</a>
 	</div>

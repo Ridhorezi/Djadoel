@@ -2054,6 +2054,10 @@ IEclipsePreferences#org-eclipse-team-cvs-ui {
 		'pref_console_command_color=98,114,164'
 		'pref_console_error_color=139,233,253'
 }
+IEclipsePreferences#org-eclipse-tm-terminal-control {
+	preferences:
+		'TerminalPrefInvertColors=false'
+}
 IEclipsePreferences#org-eclipse-ui-editors {
 	preferences:
 		'AbstractTextEditor.Color.Background=25,29,31'
@@ -2228,8 +2232,15 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.emf.codegen.ui.jet.expressionForeground=152,152,255'
 		'org.eclipse.emf.codegen.ui.jet.scriptletBackground=2,3,3'
 		'org.eclipse.emf.codegen.ui.jet.scriptletForeground=235,237,239'
-		'org.eclipse.gef.color.list.hover.background=38,34,27'
-		'org.eclipse.gef.color.list.selected.background=21,23,25'
+		'org.eclipse.gef.color.button=55,62,67'
+		'org.eclipse.gef.color.line.foreground=55,62,67'
+		'org.eclipse.gef.color.list.background=50,57,62'
+		'org.eclipse.gef.color.list.foreground=219,222,225'
+		'org.eclipse.gef.color.list.hover.background=60,67,73'
+		'org.eclipse.gef.color.list.selected.background=78,88,95'
+		'org.eclipse.gef.color.menu.background=32,36,39'
+		'org.eclipse.gef.color.menu.foreground=219,222,225'
+		'org.eclipse.gef.color.menu.foreground.selected=90,101,109'
 		'org.eclipse.jdt.ui.ColoredLabels.inherited=143,143,191'
 		'org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=255,128,128'
 		'org.eclipse.jdt.ui.Javadoc.backgroundColor=48,54,59'
@@ -2524,6 +2535,28 @@ IEclipsePreferences#org-eclipse-xtend-core-Xtend {
 		'org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.static.field.color=248,248,242'
 		'org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.static.method.invocation.color=80,250,123'
 		'org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xtend.richText.bgColor=39,44,48'
+}
+IEclipsePreferences#org-eclipse-xtext-ui {
+	preferences:
+		'syntaxColorer.comment.color=85,96,104'
+		'syntaxColorer.default.color=227,230,232'
+		'syntaxColorer.error.color=173,25,62'
+		'syntaxColorer.keyword.color=214,38,99'
+		'syntaxColorer.keyword.style=1'
+		'syntaxColorer.number.color=104,151,187'
+		'syntaxColorer.punctuation.color=227,230,232'
+		'syntaxColorer.string.color=41,197,163'
+		'syntaxColorer.task.color=126,140,149'
+		'syntaxColorer.task.style=1'
+		'syntaxColorer.xbase.annotation.color=255,147,147'
+		'syntaxColorer.xbase.deprecated.members.color=165,30,52'
+		'syntaxColorer.xbase.deprecated.members.style=536870912'
+		'syntaxColorer.xbase.extension.method.invacation.color=165,46,0'
+		'syntaxColorer.xbase.field.color=102,225,248'
+		'syntaxColorer.xbase.static.field.color=141,218,248'
+		'syntaxColorer.xbase.static.field.style=2'
+		'syntaxColorer.xbase.static.method.invocation.color=150,236,63'
+		'syntaxColorer.xbase.static.method.invocation.style=2'
 }
 IEclipsePreferences#org-epic-perleditor {
 	preferences:

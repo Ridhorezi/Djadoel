@@ -22,39 +22,24 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
+	private void exposeDirectory(String pathPattern, ResourceHandlerRegistry registry) {
+		Path path = Paths.get(pathPattern);
+		String absolutePath = path.toFile().getAbsolutePath();
+		String logicalPath = pathPattern.replace("../", "") + "/**";
+		registry.addResourceHandler(logicalPath).addResourceLocations("file:/" + absolutePath + "/");
+	}
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
 		// User Configuration
-
-		String userImagesDirectoryName = "user-photos";
-
-		Path userPhotosDirectory = Paths.get(userImagesDirectoryName);
-
-		String userPhotosPath = userPhotosDirectory.toFile().getAbsolutePath();
-
-		registry.addResourceHandler("/" + userImagesDirectoryName + "/**")
-				.addResourceLocations("file:/" + userPhotosPath + "/");
+		exposeDirectory("user-photos", registry);
 
 		// Category Configuration
-
-		String categoryImagesDirectoryName = "../category-images";
-
-		Path categoryImagesDirectory = Paths.get(categoryImagesDirectoryName);
-
-		String categoryImagesPath = categoryImagesDirectory.toFile().getAbsolutePath();
-
-		registry.addResourceHandler("/category-images/**").addResourceLocations("file:/" + categoryImagesPath + "/");
+		exposeDirectory("../category-images", registry);
 
 		// Brand Configuration
-
-		String brandLogosDirectoryName = "../brand-logos";
-
-		Path brandLogosDirectory = Paths.get(brandLogosDirectoryName);
-
-		String brandLogosPath = brandLogosDirectory.toFile().getAbsolutePath();
-
-		registry.addResourceHandler("/brand-logos/**").addResourceLocations("file:/" + brandLogosPath + "/");
+		exposeDirectory("../brand-logos", registry);
 	}
 
 	// Internationalization Configuration

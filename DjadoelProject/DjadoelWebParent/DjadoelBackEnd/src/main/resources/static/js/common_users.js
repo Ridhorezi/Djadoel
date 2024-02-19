@@ -57,6 +57,67 @@ const Toast = Swal.mixin({
 	}
 })
 
+function exportData(exportLink, fileType) {
+	Swal.fire({
+		title: 'Export ' + fileType,
+		text: 'Are you sure you want to export ' + fileType + '?',
+		icon: 'question',
+		showCancelButton: true,
+		confirmButtonText: 'Yes, export it!',
+		cancelButtonText: 'Cancel',
+		showLoaderOnConfirm: true,
+		preConfirm: () => {
+			return new Promise((resolve) => {
+				$.ajax({
+					url: exportLink,
+					type: 'GET',
+					success: function(response) {
+						resolve();
+					},
+					error: function(xhr, status) {
+						Swal.fire({
+							icon: 'error',
+							title: 'Oops...',
+							text: 'Export ' + fileType + ' failed! Error: ' + xhr.status
+						});
+					}
+				});
+			});
+		}
+	}).then((result) => {
+		if (result.isConfirmed) {
+			window.location.href = exportLink;
+			setTimeout(function() {
+				Swal.fire({
+					icon: 'success',
+					title: 'Success',
+					text: "Successfuly " + ' Export ' + fileType
+				});
+			}, 500);
+		}
+	});
+}
+
+// Event listener untuk tombol ekspor Excel
+$('#csvButton').click(function(e) {
+	e.preventDefault();
+	var exportLink = $(this).attr('href');
+	exportData(exportLink, 'CSV');
+});
+
+// Event listener untuk tombol ekspor Excel
+$('#excelButton').click(function(e) {
+	e.preventDefault();
+	var exportLink = $(this).attr('href');
+	exportData(exportLink, 'Excel');
+});
+
+// Event listener untuk tombol ekspor PDF
+$('#pdfButton').click(function(e) {
+	e.preventDefault();
+	var exportLink = $(this).attr('href');
+	exportData(exportLink, 'PDF');
+});
 
 $(document).ready(function() {
 	// Event delegation untuk tombol delete
@@ -77,80 +138,6 @@ $(document).ready(function() {
 	});
 });
 
-$('#csvButton').click(function(e) {
-	e.preventDefault();
-	var exportLink = $(this).attr('href');
-	Swal.fire({
-		title: 'Export CSV',
-		text: 'Are you sure you want to export CSV?',
-		icon: 'question',
-		showCancelButton: true,
-		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel',
-		showLoaderOnConfirm: true,
-		preConfirm: () => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve();
-				}, 2000);
-			});
-		}
-	}).then((result) => {
-		if (result.isConfirmed) {
-			window.location.href = exportLink;
-		}
-	});
-});
-
-$('#excelButton').click(function(e) {
-	e.preventDefault();
-	var exportLink = $(this).attr('href');
-	Swal.fire({
-		title: 'Export Excel',
-		text: 'Are you sure you want to export Excel?',
-		icon: 'question',
-		showCancelButton: true,
-		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel',
-		showLoaderOnConfirm: true,
-		preConfirm: () => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve();
-				}, 2000);
-			});
-		}
-	}).then((result) => {
-		if (result.isConfirmed) {
-			window.location.href = exportLink;
-		}
-	});
-});
-
-$('#pdfButton').click(function(e) {
-	e.preventDefault();
-	var exportLink = $(this).attr('href');
-	Swal.fire({
-		title: 'Export PDF',
-		text: 'Are you sure you want to export PDF?',
-		icon: 'question',
-		showCancelButton: true,
-		confirmButtonText: 'Yes, export it!',
-		cancelButtonText: 'Cancel',
-		showLoaderOnConfirm: true,
-		preConfirm: () => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve();
-				}, 2000);
-			});
-		}
-	}).then((result) => {
-		if (result.isConfirmed) {
-			window.location.href = exportLink;
-		}
-	});
-});
 
 // get current URL
 var currentUrl = window.location.pathname;

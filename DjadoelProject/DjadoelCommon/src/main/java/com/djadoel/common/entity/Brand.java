@@ -12,6 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 /* 
  * Created by: Ridho Suhaebi Arrowi
@@ -48,6 +49,11 @@ public class Brand {
 	public Brand(String name) {
 		this.name = name;
 		this.logo = "default.png";
+	}
+
+	public Brand(Integer id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 
 	// Implement Getter & Setter
@@ -89,6 +95,16 @@ public class Brand {
 	@Override
 	public String toString() {
 		return "Brand [id=" + id + ", name=" + name + ", categories=" + categories + "]";
+	}
+
+	// implement logo default
+
+	@Transient
+	public String getLogoPath() {
+		if (this.id == null)
+			return "/images/default-image.jpg";
+
+		return "/brand-logos/" + this.id + "/" + this.logo;
 	}
 
 }

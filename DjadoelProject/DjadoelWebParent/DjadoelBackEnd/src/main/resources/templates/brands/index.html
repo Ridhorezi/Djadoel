@@ -35,23 +35,30 @@
 					<table class="table table-hover nowrap w-100">
 						<thead>
 							<tr>
-								<th>[[#{brand.id}]]</th>
-								<th>[[#{brand.logo}]]</th>
-								<th>[[#{brand.name}]]</th>
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/brands/page/', 'id', #{brand.id})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/brands/page/', 'logo', #{brand.logo})}">
+								<th
+									th:replace="~{fragments/fragment :: thFragment('/brands/page/', 'name', #{brand.name})}">
 								<th>[[#{brand.categories}]]</th>
-								<th style="width: 17%;">[[#{user.action}]]</th>
+								<th style="width: 17%;">[[#{brand.action}]]</th>
+							</tr>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="brand : ${listBrands}">
 								<td>[[${brand.id}]]</td>
-								<td></td>
-								<td>[[${brand.name}]]</td>
 								<td>
-									<th:block th:each="cat : ${brand.categories}">
-										<span class="badge bg-primary-subtle text-primary rounded-3 fw-semibold fs-2 m-1" th:text="${cat.name}"></span>
-									</th:block>
+									<div
+										th:replace="~{fragments/fragment :: thumbnail(${brand.logo}, ${brand.logoPath})}"></div>
 								</td>
+								<td>[[${brand.name}]]</td>
+								<td><th:block th:each="cat : ${brand.categories}">
+										<span
+											class="badge bg-primary-subtle text-primary rounded-3 fw-semibold fs-2 m-1"
+											th:text="${cat.name}"></span>
+									</th:block></td>
 								<td>
 									<div
 										th:replace="~{fragments/fragment :: buttonEdit('brand', '/brands/edit/' + ${brand.id})}"></div>
@@ -62,6 +69,8 @@
 							</tr>
 						</tbody>
 					</table>
+					<div
+						th:replace="~{fragments/fragment :: pagination('/brands', #{brand.brands})}"></div>
 				</div>
 			</div>
 		</div>
@@ -88,7 +97,7 @@
 		if (addMessage === "success") {
 			Toast.fire({
 				icon : "success",
-				text : "The user has been successfully saved",
+				text : "The brand has been successfully saved",
 			});
 		} else if (addMessage === "error") {
 			Swal.fire({
@@ -100,7 +109,7 @@
 		} else if (updateMessage === "success") {
 			Toast.fire({
 				icon : "success",
-				text : "The user has been successfully updated",
+				text : "The brand has been successfully updated",
 			});
 		} else if (updateMessage === "error") {
 			Swal.fire({
@@ -112,7 +121,7 @@
 		} else if (deleteMessage === "success") {
 			Toast.fire({
 				icon : "success",
-				text : "The user has been successfully deleted",
+				text : "The brand has been successfully deleted",
 			});
 		} else if (statusMessage && statusMessage !== "undefined") {
 			Toast.fire({

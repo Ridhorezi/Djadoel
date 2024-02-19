@@ -90,78 +90,77 @@
 		var categoryAlias = $("#alias").val();
 		var csrfValue = $("input[name='_csrf']").val();
 		var params = {
-			id : categoryId,
-			name : categoryName,
-			alias : categoryAlias,
-			_csrf : csrfValue
+			id: categoryId,
+			name: categoryName,
+			alias: categoryAlias,
+			_csrf: csrfValue
 		};
 		var isResponseReceived = false; // Menandai apakah respons telah diterima
 		var requestTimeout = setTimeout(function() {
 			if (!isResponseReceived) {
 				// Jika respons belum diterima, tampilkan pesan timeout
 				Swal.fire({
-					icon : "error",
-					title : "Ups !",
-					text : "Request timed out.",
-					showCloseButton : true,
+					icon: "error",
+					title: "Ups !",
+					text: "Request timed out.",
+					showCloseButton: true,
 				});
 			}
 		}, 7000); // Timeout dalam milidetik (7 detik)
 
-		$
-				.post(
-						url,
-						params,
-						function(response) {
-							isResponseReceived = true; // Tandai bahwa respons telah diterima
-							clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
-							if (response == "OK") {
-								form.submit();
-							} else if (response == "DuplicateName") {
-								Swal
-										.fire({
-											icon : "info",
-											title : "Duplicate Name",
-											text : "There is another category having same name "
-													+ categoryName,
-											customClass : {
-												text : 'text-class'
-											},
-											showCloseButton : true,
-										});
-							} else if (response == "DuplicateAlias") {
-								Swal
-										.fire({
-											icon : "info",
-											title : "Duplicate Alias",
-											text : "There is another category having same alias "
-													+ categoryAlias,
-											customClass : {
-												text : 'text-class'
-											},
-											showCloseButton : true,
-										});
-							} else {
-								Swal.fire({
-									icon : "error",
-									title : response,
-									text : "Unknown response from server.",
-									showCloseButton : true,
-								});
-							}
-						})
-				.fail(
-						function(response) {
-							isResponseReceived = true; // Tandai bahwa respons telah diterima
-							clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
-							Swal
-									.fire({
-										icon : "error",
-										title : "Ups !",
-										text : "An error occurred while connecting to the server.",
-										showCloseButton : true,
-									});
+		$.post(
+			url,
+			params,
+			function(response) {
+				isResponseReceived = true; // Tandai bahwa respons telah diterima
+				clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+				if (response == "OK") {
+					form.submit();
+				} else if (response == "DuplicateName") {
+					Swal
+						.fire({
+							icon: "info",
+							title: "Duplicate Name",
+							text: "There is another category having same name "
+								+ categoryName,
+							customClass: {
+								text: 'text-class'
+							},
+							showCloseButton: true,
 						});
+				} else if (response == "DuplicateAlias") {
+					Swal
+						.fire({
+							icon: "info",
+							title: "Duplicate Alias",
+							text: "There is another category having same alias "
+								+ categoryAlias,
+							customClass: {
+								text: 'text-class'
+							},
+							showCloseButton: true,
+						});
+				} else {
+					Swal.fire({
+						icon: "error",
+						title: response,
+						text: "Unknown response from server.",
+						showCloseButton: true,
+					});
+				}
+			})
+			.fail(
+				function(response) {
+					isResponseReceived = true; // Tandai bahwa respons telah diterima
+					clearTimeout(requestTimeout); // Hapus timeout jika respons telah diterima
+					Swal
+						.fire({
+							icon: "error",
+							title: "Ups !",
+							text: "An error occurred while connecting to the server.",
+							showCloseButton: true,
+						});
+				});
 		return false;
 	}
 </script>
