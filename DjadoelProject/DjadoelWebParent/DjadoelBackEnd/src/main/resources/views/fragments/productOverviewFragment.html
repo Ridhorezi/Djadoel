@@ -1,0 +1,65 @@
+<!-- fragment product overview -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="productOverview" remove="tag">
+		<div class="mb-3 mt-2">
+			<label>[[#{product.name}]]</label> <input th:field="*{name}"
+				type="text" class="form-control" required="required" minlength="5"
+				maxlength="120" placeholder="Product Name" />
+		</div>
+		<div class="mb-3 mt-2">
+			<label>[[#{product.alias}]]</label> <input th:field="*{alias}"
+				type="text" class="form-control" required="required" minlength="5"
+				maxlength="120"
+				placeholder="Default is product name (spaces are replaced by dashes)" />
+		</div>
+		<div class="mb-3 mt-2">
+			<label>[[#{product.brands}]]</label> <select class="form-select"
+				th:field="*{brand}" required="required">
+				<th:block th:each="brand : ${listBrands}">
+					<option th:value="${brand.id}">[[${brand.name}]]</option>
+				</th:block>
+			</select>
+		</div>
+		<div class="mb-3">
+			<label>[[#{product.categories}]]</label> <select class="form-select"
+				th:field="*{category}" required="required">
+
+			</select>
+		</div>
+		<div class="mb-2 row">
+			<label>[[#{product.enabled}]]</label>
+			<div class="col-sm-4">
+				<div class="form-check form-switch mb-3">
+					<input th:field="*{enabled}" class="form-check-input"
+						type="checkbox" />
+				</div>
+			</div>
+		</div>
+		<div class="mb-2 row">
+			<label>[[#{product.instock}]]</label>
+			<div class="col-sm-4">
+				<div class="form-check form-switch mb-3">
+					<input th:field="*{inStock}" class="form-check-input"
+						type="checkbox" />
+				</div>
+			</div>
+		</div>
+		<div class="mb-3 mt-2">
+			<label>[[#{product.cost}]]</label> <input th:field="*{cost}"
+				type="number" class="form-control" required="required" />
+		</div>
+		<div class="mb-3 mt-2">
+			<label>[[#{product.price}]]</label> <input th:field="*{price}"
+				type="number" class="form-control" required="required" />
+		</div>
+		<div class="mb-3 mt-2">
+			<label>[[#{product.discountpercent}]]</label> <input
+				th:field="*{discountPercent}" type="number" class="form-control"
+				required="required" />
+		</div>
+	</div>
+</body>
+</html>
