@@ -1,0 +1,38 @@
+<!-- fragment product shipping -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="productShipping" remove="tag">
+		<div class="mb-3 mt-2">
+			The following information is important to calculate shipping cost for
+			the product. <br> The dimensions (L X W X H X W) is for the box that
+			is used to package the product - not the product's dimensions.
+		</div>
+
+		<div class="mb-3 mt-2">
+			<label>[[#{product.length}]] (inch)</label> <input
+				th:field="*{length}" type="number" class="form-control"
+				required="required" />
+		</div>
+		
+		<div class="mb-3 mt-2">
+			<label>[[#{product.width}]] (inch)</label> <input
+				th:field="*{width}" type="number" class="form-control"
+				required="required" />
+		</div>
+
+		<div class="mb-3 mt-2">
+			<label>[[#{product.height}]] (inch)</label> <input
+				th:field="*{height}" type="number" class="form-control"
+				required="required" />
+		</div>
+
+		<div class="mb-3 mt-2">
+			<label>[[#{product.weight}]] (pounds)</label> <input
+				th:field="*{weight}" type="number" class="form-control"
+				required="required" />
+		</div>
+	</div>
+</body>
+</html>

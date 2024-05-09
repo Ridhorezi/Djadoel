@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{layouts/main_layout}">
+<head>
+<title>[[#{djadoel.title}]] | [[#{product.title}]] |
+	[[#{product.titlecreate}]]</title>
+</head>
+
+<body>
+	<div layout:fragment="content" class="row">
+		<div class="card">
+			<div class="card-body">
+				<ol class="breadcrumb mb-4">
+					<li class="breadcrumb-item"><a th:href="@{/}">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a
+						th:href="@{/products}">[[#{product.title}]]</a></li>
+					<li class="breadcrumb-item active" aria-current="page">[[#{product.titlecreate}]]</li>
+				</ol>
+				<form th:action="@{/products/save}" th:object="${product}"
+					method="post" class="form-horizontal" enctype="multipart/form-data">
+
+					<div class="mb-3">
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="overview-tab"
+									data-bs-toggle="tab" data-bs-target="#overview" type="button"
+									role="tab">Overview</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="description-tab"
+									data-bs-toggle="tab" data-bs-target="#description"
+									type="button" role="tab">Description</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="images-tab" data-bs-toggle="tab"
+									data-bs-target="#images" type="button" role="tab">Images</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="details-tab" data-bs-toggle="tab"
+									data-bs-target="#details" type="button" role="tab">Details</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="shipping-tab" data-bs-toggle="tab"
+									data-bs-target="#shipping" type="button" role="tab">Shipping</button>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="overview" role="tabpanel"
+								aria-labelledby="overview-tab" tabindex="0">
+								<div
+									th:replace="~{fragments/productOverviewFragment :: productOverview}"></div>
+							</div>
+
+							<div class="tab-pane" id="description" role="tabpanel"
+								aria-labelledby="description-tab" tabindex="0">
+								<div
+									th:replace="~{fragments/productDescriptionFragment :: productDescription}"></div>
+							</div>
+
+							<div class="tab-pane" id="images" role="tabpanel"
+								aria-labelledby="images-tab" tabindex="0">
+								<div
+									th:replace="~{fragments/productImagesFragment :: productImages}"></div>
+							</div>
+
+							<div class="tab-pane" id="details" role="tabpanel"
+								aria-labelledby="details-tab" tabindex="0">
+								<div
+									th:replace="~{fragments/productDetailsFragment :: productDetails}"></div>
+							</div>
+
+							<div class="tab-pane" id="shipping" role="tabpanel"
+								aria-labelledby="shipping-tab" tabindex="0">
+								<div
+									th:replace="~{fragments/productShippingFragment :: productShipping}"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-sm-3"></div>
+
+					<div class="col-sm-9">
+						<div class="d-flex align-items-start gap-3">
+							<div
+								th:replace="~{fragments/fragment :: buttonSave(#{button.save})}"></div>
+
+							<div
+								th:replace="~{fragments/fragment :: buttonCancel(#{button.cancel})}"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+<script th:src="@{/js/common_products.js}"></script>
+
+<script type="text/javascript">
+	moduleURL = "[[@{/products}]]";
+
+	brandModuleURL = "[[@{/brands}]]";
+
+	dropdownBrands = $("#brand");
+
+	dropdownCategories = $("#category");
+
+	$(document).ready(function() {
+
+		dropdownBrands.change(function() {
+			dropdownCategories.empty();
+			getCategories();
+		});
+
+		getCategories();
+
+	});
+
+	function getCategories() {
+
+		brandId = dropdownBrands.val();
+
+		url = brandModuleURL + "/" + brandId + "/categories";
+
+		$.get(url, function(responseJson) {
+
+			$.each(responseJson, function(index, category) {
+				$("<option>").val(category.id).text(category.name).appendTo(
+						dropdownCategories);
+			})
+		});
+	}
+	
+	ClassicEditor
+    .create( document.querySelector( '#shortDescription' ) )
+    .catch( error => {
+        console.error( error );
+    } ); 	
+	
+	ClassicEditor
+    .create( document.querySelector( '#fullDescription' ) )
+    .catch( error => {
+        console.error( error );
+    } );
+	 
+</script>
+
+<style type="text/css">
+.title-class {
+	font-size: 17px !important;
+}
+</style>

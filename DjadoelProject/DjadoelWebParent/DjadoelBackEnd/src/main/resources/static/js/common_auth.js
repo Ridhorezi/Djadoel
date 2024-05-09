@@ -17,7 +17,7 @@ function removeLoginParam() {
 	history.replaceState(null, "", url);
 }
 
-const passwordInput = document.getElementById("password");
+/*const passwordInput = document.getElementById("password");
 const showPasswordCheckbox = document.getElementById("showPassword");
 
 showPasswordCheckbox.addEventListener("change", function() {
@@ -26,4 +26,4 @@ showPasswordCheckbox.addEventListener("change", function() {
 	} else {
 		passwordInput.type = "password";
 	}
-});
+});*/
