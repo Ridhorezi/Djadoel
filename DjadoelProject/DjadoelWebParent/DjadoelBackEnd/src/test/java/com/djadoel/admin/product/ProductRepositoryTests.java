@@ -59,7 +59,7 @@ public class ProductRepositoryTests {
 
 		product.setCreatedDtm(new Date());
 
-		product.setLastUpdatedDtm(new Date());
+		product.setUpdatedDtm(new Date());
 
 		product.setBrand(brand);
 

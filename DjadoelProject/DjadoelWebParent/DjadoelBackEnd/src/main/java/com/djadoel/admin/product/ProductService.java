@@ -28,7 +28,7 @@ public class ProductService {
 		try {
 			return productRepository.findById(id).get();
 		} catch (Exception e) {
-			throw new ProductNotFoundException("Could not find any brand with ID " + id);
+			throw new ProductNotFoundException("Could not find any product with ID " + id);
 		}
 	}
 
